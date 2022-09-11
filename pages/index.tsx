@@ -1,15 +1,15 @@
-import { Post } from '../components/Post';
-import { MainLayout } from '../layouts/MainLayout';
+import { Post } from "../App/components/elements/Post";
+import { ContentLayout } from "../App/components/layouts/contentLayout/ContentLayout";
 
 export default function Home() {
   return (
-    <MainLayout>
+    <ContentLayout>
       <Post />
       <Post />
       <Post />
       <Post />
       <Post />
       <Post />
-    </MainLayout>
+    </ContentLayout>
   );
 }

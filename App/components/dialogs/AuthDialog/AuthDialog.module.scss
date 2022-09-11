@@ -1,0 +1,27 @@
+.root {
+  width: 700px !important;
+}
+.imgContainer {
+  display: inline-flex;
+  width: 350px;
+}
+.logo {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.closeIcon {
+  position: absolute !important;
+  right: 10px;
+  top: 10px;
+}

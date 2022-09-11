@@ -1,21 +1,17 @@
-import React from 'react';
-import {NextPage} from "next";
-import {TextField} from "@material-ui/core";
-import {MainLayout} from "../layouts/MainLayout";
+import React from "react";
+import { NextPage } from "next";
+import { TextField } from "@material-ui/core";
+import { ContentLayout } from "../App/components/layouts/contentLayout/ContentLayout";
+import { WriteForm } from "../App/components/elements/WriteForm";
 
-interface IWritePage {
-
-}
+interface IWritePage {}
 
 const WritePage: NextPage<IWritePage> = (props) => {
-    return (
-        <MainLayout>
-            <div style={{ backgroundColor: '#fff'}}>
-                <TextField placeholder="Заголовок" />
-            </div>
-        </MainLayout>
-    );
+  return (
+    <ContentLayout hideComments hideMenu className="main-layout-white">
+      <WriteForm />
+    </ContentLayout>
+  );
 };
 
-export default WritePage
-
+export default WritePage;

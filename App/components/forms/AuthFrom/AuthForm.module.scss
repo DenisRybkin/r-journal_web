@@ -1,0 +1,44 @@
+.mainContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+.backTitle {
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  &:hover {
+    color: var(--dark--text-color);
+  }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 15px 0 24px 0;
+  cursor: pointer;
+
+  &:hover {
+    span {
+      color: var(--primary-color_strong);
+    }
+  }
+}
+
+.loginContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 60px;
+}

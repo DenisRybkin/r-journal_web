@@ -8,23 +8,32 @@ import {
   Typography,
   Tabs,
   Tab,
-} from '@material-ui/core';
+} from "@material-ui/core";
 
-import { MainLayout } from '../layouts/MainLayout';
-import { FollowButton } from '../components/FollowButton';
+import { ContentLayout } from "../App/components/layouts/contentLayout/ContentLayout";
+import { FollowButton } from "../App/components/elements/FollowButton";
 
-export default function Rating() {
+export default function RatingPage() {
   return (
-    <MainLayout>
+    <ContentLayout>
       <Paper className="pl-20 pt-20 pr-20 mb-20" elevation={0}>
-        <Typography variant="h5" style={{ fontWeight: 'bold', fontSize: 30, marginBottom: 6 }}>
+        <Typography
+          variant="h5"
+          style={{ fontWeight: "bold", fontSize: 30, marginBottom: 6 }}
+        >
           Рейтинг сообществ и блогов
         </Typography>
         <Typography style={{ fontSize: 15 }}>
-          Десять лучших авторов и комментаторов, а также администраторы первых десяти сообществ из
-          рейтинга по итогам месяца бесплатно получают Plus-аккаунт на месяц.
+          Десять лучших авторов и комментаторов, а также администраторы первых
+          десяти сообществ из рейтинга по итогам месяца бесплатно получают
+          Plus-аккаунт на месяц.
         </Typography>
-        <Tabs className="mt-10" value={0} indicatorColor="primary" textColor="primary">
+        <Tabs
+          className="mt-10"
+          value={0}
+          indicatorColor="primary"
+          textColor="primary"
+        >
           <Tab label="Август" />
           <Tab label="За 3 месяцуа" />
           <Tab label="За всё время" />
@@ -53,6 +62,6 @@ export default function Rating() {
           </TableBody>
         </Table>
       </Paper>
-    </MainLayout>
+    </ContentLayout>
   );
 }
