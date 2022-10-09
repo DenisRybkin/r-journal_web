@@ -8,10 +8,9 @@ export class AppStore {
 
   private isOpenSidebar: boolean;
 
-  constructor(root: RootStore) {
+  constructor(root?: RootStore) {
     makeAutoObservable(this);
-    console.log(this);
-    this.root = root;
+    //this.root = root;
     this.isOpenSidebar =
       LocalStorageHelper.get(LocalStorageKeys.isOpenSidebar) ?? true;
   }
@@ -26,9 +25,11 @@ export class AppStore {
   }
 
   toggleIsOpenSidebar(): void {
-    console.log(44444);
     LocalStorageHelper.set(LocalStorageKeys.isOpenSidebar, !this.isOpenSidebar);
+    console.log(this.isOpenSidebar);
     this.isOpenSidebar = !this.isOpenSidebar;
     console.log(this.isOpenSidebar);
   }
 }
+
+export const testStore = new AppStore();

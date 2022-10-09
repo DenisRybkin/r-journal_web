@@ -8,6 +8,8 @@ export class RootStore {
     makeAutoObservable(this);
     this.appStore = new AppStore(this);
   }
+
+  hydrate() {} //TODO: think about it
 }
 
 export const rootStore = new RootStore();
