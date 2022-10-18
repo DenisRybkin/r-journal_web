@@ -1,7 +1,7 @@
 import React from "react";
 import { Dialog, DialogContentText, IconButton } from "@material-ui/core";
 import styles from "./AuthDialog.module.scss";
-import { AuthFrom } from "../../forms/AuthFrom";
+import { AuthFrom } from "../../forms/AuthFrom/AuthForm";
 import CloseIcon from "@material-ui/icons/Close";
 
 interface IAuthDialog {

@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./AuthForm.module.scss";
+import styles from "../../AuthForm.module.scss";
 import { Button, TextField } from "@material-ui/core";
-import { ISignupForm } from "./Auth.form.interface";
+import { ISignupForm } from "../../Auth.form.interface";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { SignupSchemaValidation } from "../../../utils/schemas/signupSchema.validation";
+import { SignupSchemaValidation } from "../../../../../utils/schemas/signupSchema.validation";
 
 export const SignupForm: React.FC<ISignupForm> = (props) => {
   const form = useForm({

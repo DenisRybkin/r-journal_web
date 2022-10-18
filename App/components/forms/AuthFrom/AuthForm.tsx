@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ContentKeys } from "./misc/contentKeys";
-import { LoginForm } from "./LoginForm";
-import { AuthContent } from "./AuthContent";
-import { SignupForm } from "./SignupForm";
+import { LoginFormView } from "./forms/loginForm/LoginFormView";
+import { AuthContentView } from "./components/authContent/AuthContentView";
+import { SignupForm } from "./forms/signupForm/SignupForm";
 import { ReturnText } from "./ReturnText";
 import {
   ILoginCredentials,
@@ -57,10 +57,10 @@ export const AuthFrom = () => {
   const handleRenderContent = (): JSX.Element => {
     switch (currentContentKey) {
       case ContentKeys.authContent:
-        return <AuthContent onOpenLoginForm={handleOpenLoginForm} />;
+        return <AuthContentView onOpenLoginForm={handleOpenLoginForm} />;
       case ContentKeys.loginForm:
         return (
-          <LoginForm
+          <LoginFormView
             loginCredentials={loginCredentials}
             onOpenSignForm={handleOpenSignupFrom}
             onChangeLoginCredentials={handleChangeLoginCredentials}
