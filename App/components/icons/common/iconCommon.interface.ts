@@ -1,4 +1,4 @@
-import { IconColors, IconsKeys } from "./IconsKeys";
+import { IconColors, IconsKeys } from "./iconsKeys";
 
 export interface IIconCommon {
   width?: number;

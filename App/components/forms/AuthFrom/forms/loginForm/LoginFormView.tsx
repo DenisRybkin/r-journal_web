@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { LoginSchemaValidation } from "../../../../../utils/schemas/loginSchema.validation";
 
-export const LoginForm: React.FC<ILoginForm> = (props) => {
+export const LoginFormView = (props: ILoginForm) => {
   const form = useForm({
     mode: "onChange",
     resolver: yupResolver(LoginSchemaValidation),

@@ -1,45 +1,27 @@
-import React, {useState} from 'react';
-import {Button, Input} from "@material-ui/core";
-import styles from "./AddCommentForm.module.scss"
+import React, { useState } from "react";
+import { IAddCommentFormView } from "./addCommentForm.interface";
+import { AddCommentFormView } from "./AddCommentFormView";
 
-interface IAddCommentForm {
+export const AddCommentForm = (props: IAddCommentFormView) => {
+  const [isFocused, setIsFocused] = useState<boolean>(false);
+  const [comment, setComment] = useState("");
 
-}
+  const handleFocus = () => setIsFocused(true);
 
-export const AddCommentForm: React.FC<IAddCommentForm> = (props) => {
+  const handleChangeComment = (value: string) => setComment(value);
 
-    const [isFocused, setIsFocused] = useState<boolean>(false);
-    const [comment, setComment] = useState("");
+  const handleSendComment = async () => {
+    setIsFocused(false);
+    setComment("");
+  };
 
-    const handleSendComment = () => {
-        setIsFocused(false);
-        setComment("");
-    }
-
-    const handleFocus = () => setIsFocused(true);
-
-    return (
-        <form className={styles.form}>
-            <Input
-                value={comment}
-                minRows={isFocused ? 5 : 1}
-                onFocus={handleFocus}
-                onChange={e => setComment(e.target.value)}
-                classes={{ root: styles.fieldRoot}}
-                placeholder="Написать комментарий ..."
-                fullWidth
-                multiline
-            />
-            {isFocused &&
-            <Button
-                onClick={handleSendComment}
-                className={styles.addButton}
-                style={{height: 42}}
-                variant="contained"
-                color="primary">
-                Опубликовать
-            </Button>}
-        </form>
-    );
+  return (
+    <AddCommentFormView
+      comment={comment}
+      onFocus={handleFocus}
+      isFocused={isFocused}
+      onChangeComment={handleChangeComment}
+      onSendComment={handleSendComment}
+    />
+  );
 };
-

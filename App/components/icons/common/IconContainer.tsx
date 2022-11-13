@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
-import styles from "./CommonIcon.module.scss";
+import styles from "./commonIcon.module.scss";
 import clsx from "clsx";
-import { IIconCommon } from "./IconCommon.interface";
-import { IconColors, IconsKeys } from "./IconsKeys";
+import { IIconCommon } from "./iconCommon.interface";
+import { IconColors, IconsKeys } from "./iconsKeys";
 import {
   GoogleLogoIcon,
   VKLogoIcon,

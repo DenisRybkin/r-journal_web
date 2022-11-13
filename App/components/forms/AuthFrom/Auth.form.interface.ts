@@ -2,14 +2,6 @@ import React from "react";
 
 export interface ILoginForm {}
 
-export interface IAuthContent {
-  onOpenLoginForm: () => void;
-}
-
-export interface IReturnText {
-  onOpenAuthContent: () => void;
-}
-
 export interface ILoginForm {
   loginCredentials: ILoginCredentials;
   onOpenSignForm: () => void;

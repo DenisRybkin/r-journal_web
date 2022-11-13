@@ -1,6 +1,3 @@
-import { TwitterLogo } from "../TwitterLogo";
-import { AppleLogo } from "../AppleLogo";
-
 export enum IconsKeys {
   googleLogo,
   message,

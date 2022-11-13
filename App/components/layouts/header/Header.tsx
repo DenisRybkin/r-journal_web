@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AuthDialog } from "../../dialogs/AuthDialog";
+import { AuthDialog } from "../../dialogs/authDialog/AuthDialog";
 import { HeaderView } from "./HeaderView";
 import { useRootStore } from "../../../hooks/useRoorStore";
 import { observer } from "mobx-react-lite";
@@ -20,7 +20,7 @@ const HeaderObserver: React.FC = (props: IHeader) => {
       <HeaderView
         toggleSidebar={appStore.toggleIsOpenSidebar.bind(appStore)}
         //toggleSidebar={testStore.toggleIsOpenSidebar.bind(testStore)}
-        isAuth={true}
+        isAuth={false}
         onOpenAuthDialog={handleOpenAuthDialog}
       />
     </>

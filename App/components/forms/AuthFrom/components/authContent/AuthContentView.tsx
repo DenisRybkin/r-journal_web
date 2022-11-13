@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./AuthForm.module.scss";
+import styles from "../../AuthForm.module.scss";
 import { Button } from "@material-ui/core";
-import { IconContainer } from "../../icons/common/IconContainer";
-import { IconColors, IconsKeys } from "../../icons/common/IconsKeys";
-import { IAuthContent } from "./Auth.form.interface";
+import { IconContainer } from "../../../../icons/common/IconContainer";
+import { IconColors, IconsKeys } from "../../../../icons/common/iconsKeys";
+import { IAuthContentView } from "./authContent.interface";
 
-export const AuthContent: React.FC<IAuthContent> = (props) => {
+export const AuthContentView = (props: IAuthContentView) => {
   return (
     <div className={styles.mainContent}>
       <h1 style={{ marginBottom: 20 }} className={styles.title}>

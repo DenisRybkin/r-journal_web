@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ContentKeys } from "./misc/contentKeys";
 import { LoginFormView } from "./forms/loginForm/LoginFormView";
-import { AuthContentView } from "./components/authContent/AuthContentView";
-import { SignupForm } from "./forms/signupForm/SignupForm";
-import { ReturnText } from "./ReturnText";
+import { SignupFormView } from "./forms/signupForm/SignupFormView";
 import {
   ILoginCredentials,
   ISignupCredentials,
@@ -12,6 +10,9 @@ import {
 } from "./Auth.form.interface";
 import { loginInitialData, signupInitialData } from "./misc/initialData";
 import { calculateNewCredentialsObj } from "./misc/utilitarian";
+import { AuthContent } from "./components/authContent/AuthContent";
+import { BackLink } from "./components/backLink/BackLink";
+import { Fade } from "@material-ui/core";
 
 export const AuthFrom = () => {
   const [loginCredentials, setLoginCredentials] =
@@ -57,22 +58,30 @@ export const AuthFrom = () => {
   const handleRenderContent = (): JSX.Element => {
     switch (currentContentKey) {
       case ContentKeys.authContent:
-        return <AuthContentView onOpenLoginForm={handleOpenLoginForm} />;
+        return (
+          <Fade in={currentContentKey === ContentKeys.authContent}>
+            <AuthContent onOpenLoginForm={handleOpenLoginForm} />
+          </Fade>
+        );
       case ContentKeys.loginForm:
         return (
-          <LoginFormView
-            loginCredentials={loginCredentials}
-            onOpenSignForm={handleOpenSignupFrom}
-            onChangeLoginCredentials={handleChangeLoginCredentials}
-          />
+          <Fade in={currentContentKey === ContentKeys.loginForm}>
+            <LoginFormView
+              loginCredentials={loginCredentials}
+              onOpenSignForm={handleOpenSignupFrom}
+              onChangeLoginCredentials={handleChangeLoginCredentials}
+            />
+          </Fade>
         );
       case ContentKeys.signupForm:
         return (
-          <SignupForm
-            signupCredentials={signupCredentials}
-            onOpenLoginForm={handleOpenLoginForm}
-            onChangeSignupCredentials={handleChangeSignupCredentials}
-          />
+          <Fade in={currentContentKey === ContentKeys.signupForm}>
+            <SignupFormView
+              signupCredentials={signupCredentials}
+              onOpenLoginForm={handleOpenLoginForm}
+              onChangeSignupCredentials={handleChangeSignupCredentials}
+            />
+          </Fade>
         );
     }
   };
@@ -86,7 +95,7 @@ export const AuthFrom = () => {
     <>
       {(currentContentKey == ContentKeys.loginForm ||
         currentContentKey == ContentKeys.signupForm) && (
-        <ReturnText onOpenAuthContent={handleOpenAuthContent} />
+        <BackLink onOpenAuthContent={handleOpenAuthContent} />
       )}
       {handleRenderContent()}
     </>

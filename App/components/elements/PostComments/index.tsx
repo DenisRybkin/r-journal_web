@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Divider, Paper, Tab, Tabs, Typography } from "@material-ui/core";
-import { Comment } from "../Comment";
-import { AddCommentForm } from "../../forms/AddCommentForm/inedx";
+import { Comment } from "../Comment/Comment";
+import { AddCommentForm } from "../../forms/addCommentForm.interface/AddCommentForm";
 import data from "../../../utils/data";
 
 export const PostComments: React.FC = () => {
