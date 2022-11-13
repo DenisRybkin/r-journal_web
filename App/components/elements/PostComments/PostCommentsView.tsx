@@ -1,14 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Divider, Paper, Tab, Tabs, Typography } from "@material-ui/core";
+import { AddCommentForm } from "../../forms/addCommentForm/AddCommentForm";
 import { Comment } from "../Comment/Comment";
-import { AddCommentForm } from "../../forms/addCommentForm.interface/AddCommentForm";
-import data from "../../../utils/data";
+import { IPostCommentsView } from "./postComments.interface";
 
-export const PostComments: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<number>(0);
-
-  const comments = data.comments[!activeTab ? "popular" : "new"];
-
+export const PostCommentsView = (props: IPostCommentsView) => {
   return (
     <Paper elevation={0} className="mt-40 p-30">
       <div className="container">
@@ -17,8 +13,8 @@ export const PostComments: React.FC = () => {
         </Typography>
         <Tabs
           className="mt-20"
-          value={activeTab}
-          onChange={(_, newValue) => setActiveTab(newValue)}
+          value={props.activeTab}
+          onChange={(_, newValue) => props.onChangeActiveTab(newValue)}
           indicatorColor="primary"
           textColor="primary"
         >
@@ -28,13 +24,8 @@ export const PostComments: React.FC = () => {
         <Divider />
         <AddCommentForm />
         <div className="mb-20" />
-        {comments?.map((item) => (
-          <Comment
-            createdAt={item.createdAt}
-            key={item.id}
-            text={item.text}
-            user={item.user}
-          />
+        {props.comments?.map((item) => (
+          <Comment comment={item} key={item.id} />
         ))}
       </div>
     </Paper>

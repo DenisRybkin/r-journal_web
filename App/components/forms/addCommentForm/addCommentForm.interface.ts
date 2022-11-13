@@ -1,4 +1,4 @@
-interface IAddCommentForm {}
+export interface IAddCommentForm {}
 
 export interface IAddCommentFormView {
   isFocused: boolean;

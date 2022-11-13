@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { Typography, IconButton, MenuItem, Menu } from "@material-ui/core";
-import MoreIcon from "@material-ui/icons/MoreHorizOutlined";
-import styles from "./comment.module.scss";
 import { IComment } from "./сomment.interface";
 import { CommentView } from "./CommentView";
 

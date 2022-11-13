@@ -1,24 +1,14 @@
 import { EventHandler, MouseEvent, MouseEventHandler } from "react";
+import { CommentDto } from "../../../api/models/CommentDto";
 
 export interface IComment {
-  user: {
-    fullName: string;
-    avatarUrl?: string;
-  };
-  text: string;
-  createdAt: string;
+  comment: CommentDto;
 }
 
-export interface ICommentView {
+export interface ICommentView extends IComment {
   anchorEl: null | Element | ((element: Element) => Element);
   onClickOpenMenuTrigger: (event: any) => void;
   onCloseMenu: () => void;
-  user: {
-    fullName: string;
-    avatarUrl?: string;
-  };
-  text: string;
-  createdAt: string;
   isEditMode: boolean;
   onTurnOnIsEditMode: () => void;
   onOffIsEditMode: () => void;

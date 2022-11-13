@@ -16,7 +16,7 @@ const initStore = (initData) => {
   //if (initData && Object.values(initData).length > 0) store.hydrate(initData);
 
   // Create a store on every server request
-  if (typeof window === "undefined") return store;
+  if (isServer) return store;
   // Otherwise it's client, remember this store and return
   if (!clientStore) clientStore = store;
   return store;

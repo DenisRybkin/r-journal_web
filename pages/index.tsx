@@ -1,4 +1,4 @@
-import { Post } from "../App/components/elements/Post";
+import { Post } from "../App/components/elements/Post/Post";
 import { ContentLayout } from "../App/components/layouts/contentLayout/ContentLayout";
 
 export default function Home() {

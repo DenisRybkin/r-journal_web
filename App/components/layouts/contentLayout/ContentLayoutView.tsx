@@ -2,7 +2,7 @@ import React from "react";
 import { IContentLayout, IContentLayoutView } from "./contentLayout.interface";
 import clsx from "clsx";
 import { LeftMenu } from "../leftMenu/LeftMenu";
-import { SideComments } from "../../elements/SideComments";
+import { SideComments } from "../sideComments/SideComments";
 import { Slide } from "@material-ui/core";
 
 export const ContentLayoutView: React.FC<IContentLayoutView> = (props) => {

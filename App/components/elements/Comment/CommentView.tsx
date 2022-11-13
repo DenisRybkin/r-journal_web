@@ -8,11 +8,11 @@ export const CommentView = (props: ICommentView) => {
   return (
     <div className={styles.comment}>
       <div className={styles.userInfo}>
-        <img src={props.user.avatarUrl} alt="Avatar" />
-        <b>{props.user.fullName}</b>
-        <span>{props.createdAt}</span>
+        <img src={props.comment.user.avatarUrl} alt="Avatar" />
+        <b>{props.comment.user.fullName}</b>
+        <span>{props.comment.createdAt}</span>
       </div>
-      <Typography className={styles.text}>{props.text}</Typography>
+      <Typography className={styles.text}>{props.comment.text}</Typography>
       <span className={styles.replyBtn}>Ответить</span>
       <IconButton onClick={props.onClickOpenMenuTrigger}>
         <MoreIcon />

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { IAddCommentFormView } from "./addCommentForm.interface";
+import { IAddCommentForm } from "./addCommentForm.interface";
 import { AddCommentFormView } from "./AddCommentFormView";
 
-export const AddCommentForm = (props: IAddCommentFormView) => {
+export const AddCommentForm = (props: IAddCommentForm) => {
   const [isFocused, setIsFocused] = useState<boolean>(false);
   const [comment, setComment] = useState("");
 

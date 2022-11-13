@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 
 import { ContentLayout } from "../App/components/layouts/contentLayout/ContentLayout";
-import { FollowButton } from "../App/components/elements/FollowButton";
+import { FollowButton } from "../App/components/elements/FollowButton/FollowButton";
 
 export default function RatingPage() {
   return (

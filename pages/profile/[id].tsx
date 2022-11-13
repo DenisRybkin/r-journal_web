@@ -12,7 +12,7 @@ import {
   TextsmsOutlined as MessageIcon,
 } from "@material-ui/icons";
 
-import { Post } from "../../App/components/elements/Post";
+import { Post } from "../../App/components/elements/Post/Post";
 import { ContentLayout } from "../../App/components/layouts/contentLayout/ContentLayout";
 
 export default function Profile() {
