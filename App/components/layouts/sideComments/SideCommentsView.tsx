@@ -5,6 +5,7 @@ import ArrowRightIcon from "@material-ui/icons/NavigateNextOutlined";
 import data from "../../../utils/data";
 import { CommentItem } from "./components/commentItem/CommentItem";
 import { ISideCommentsView } from "./sideComments.interface";
+import { SideCommentDto } from "../../../api/models/SideCommentDto";
 
 export const SideCommentsView = (props: ISideCommentsView) => {
   return (
@@ -13,9 +14,9 @@ export const SideCommentsView = (props: ISideCommentsView) => {
         Комментарии <ArrowRightIcon />
       </h3>
       {props.isVisible &&
-        data.comments.popular.map((obj) => (
-          <CommentItem key={obj.id} {...obj} />
-        ))}
+        (data.comments.popular as unknown as SideCommentDto[]).map(
+          (comment) => <CommentItem comment={comment} key={comment.id} />
+        )}
     </div>
   );
 };

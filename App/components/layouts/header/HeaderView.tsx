@@ -11,6 +11,7 @@ import {
 } from "@material-ui/icons";
 import Link from "next/link";
 import { IHeaderView } from "./header.interface";
+import { useTranslation } from "react-i18next";
 
 export const HeaderView: React.FC<IHeaderView> = (props) => {
   return (
