@@ -6,7 +6,7 @@ import {
   Paper,
   Typography,
 } from "@material-ui/core";
-import styles from "./CommentPost.module.scss";
+import styles from "./commentPost.module.scss";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { ICommentPostView } from "./commentPost.interface";
 

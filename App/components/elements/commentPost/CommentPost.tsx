@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
-import styles from "./CommentPost.module.scss";
+import styles from "./commentPost.module.scss";
 import { ICommentPost } from "./commentPost.interface";
 import { CommentPostView } from "./CommentPostView";
 

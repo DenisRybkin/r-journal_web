@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Input } from "@material-ui/core";
-import styles from "./WirteForm.module.scss";
+import styles from "./wirteForm.module.scss";
 import { IWriteFormView } from "./writeForm.interface";
 import dynamic from "next/dynamic";
 

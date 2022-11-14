@@ -1,4 +1,4 @@
-import { ILoginCredentials, ISignupCredentials } from "../Auth.form.interface";
+import { ILoginCredentials, ISignupCredentials } from "../auth.form.interface";
 
 export const loginInitialData: ILoginCredentials = { email: "", password: "" };
 

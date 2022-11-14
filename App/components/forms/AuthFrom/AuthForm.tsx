@@ -7,7 +7,7 @@ import {
   ISignupCredentials,
   LoginCredentialsFieldType,
   SignupCredentialsFieldType,
-} from "./Auth.form.interface";
+} from "./auth.form.interface";
 import { loginInitialData, signupInitialData } from "./misc/initialData";
 import { calculateNewCredentialsObj } from "./misc/utilitarian";
 import { AuthContent } from "./components/authContent/AuthContent";

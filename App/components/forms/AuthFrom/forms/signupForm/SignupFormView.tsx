@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../../AuthForm.module.scss";
+import styles from "../../authForm.module.scss";
 import { Button, TextField } from "@material-ui/core";
-import { ISignupForm } from "../../Auth.form.interface";
+import { ISignupForm } from "../../auth.form.interface";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SignupSchemaValidation } from "../../../../../utils/schemas/signupSchema.validation";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Divider, Paper, Tab, Tabs, Typography } from "@material-ui/core";
 import { AddCommentForm } from "../../forms/addCommentForm/AddCommentForm";
-import { Comment } from "../Comment/Comment";
+import { Comment } from "../comment/Comment";
 import { IPostCommentsView } from "./postComments.interface";
 
 export const PostCommentsView = (props: IPostCommentsView) => {

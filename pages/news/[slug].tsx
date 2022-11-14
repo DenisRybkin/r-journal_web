@@ -1,7 +1,7 @@
 import { ContentLayout } from "../../App/components/layouts/contentLayout/ContentLayout";
-import { FullPost } from "../../App/components/elements/FullPost/FullPostView";
+import { FullPost } from "../../App/components/elements/fullPost/FullPostView";
 import React from "react";
-import { PostComments } from "../../App/components/elements/PostComments/PostComments";
+import { PostComments } from "../../App/components/elements/postComments/PostComments";
 
 export default function Home() {
   return (

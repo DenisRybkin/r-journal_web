@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../AuthForm.module.scss";
+import styles from "../../authForm.module.scss";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import { IconButton } from "@material-ui/core";
 import clsx from "clsx";

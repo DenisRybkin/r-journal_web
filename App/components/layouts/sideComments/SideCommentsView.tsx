@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./SideComments.module.scss";
+import styles from "./sideComments.module.scss";
 import ArrowRightIcon from "@material-ui/icons/NavigateNextOutlined";
 import data from "../../../utils/data";
 import { CommentItem } from "./components/commentItem/CommentItem";

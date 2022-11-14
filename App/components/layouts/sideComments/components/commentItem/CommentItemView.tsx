@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../SideComments.module.scss";
+import styles from "../../sideComments.module.scss";
 import Link from "next/link";
 import { ICommentItemView } from "./commentItem.interface";
 

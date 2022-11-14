@@ -3,7 +3,7 @@ import {
   ISignupCredentials,
   LoginCredentialsFieldType,
   SignupCredentialsFieldType,
-} from "../Auth.form.interface";
+} from "../auth.form.interface";
 import React from "react";
 
 export const calculateNewCredentialsObj = (

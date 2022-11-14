@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../AuthForm.module.scss";
+import styles from "../../authForm.module.scss";
 import { Button } from "@material-ui/core";
 import { IconContainer } from "../../../../icons/common/IconContainer";
 import { IconColors, IconsKeys } from "../../../../icons/common/iconsKeys";
