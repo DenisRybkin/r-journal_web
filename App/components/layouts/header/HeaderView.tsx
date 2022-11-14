@@ -14,6 +14,7 @@ import { IHeaderView } from "./header.interface";
 import { useTranslation } from "react-i18next";
 
 export const HeaderView: React.FC<IHeaderView> = (props) => {
+  const { t } = useTranslation();
   return (
     <Paper classes={{ root: styles.root }} elevation={0}>
       <div className="d-flex align-center">
