@@ -1,9 +1,27 @@
 {
-  "palceholder": {},
+  "palceholder": {
+    "heading": "Heading"
+  },
   "subheader": {},
-  "button": {},
-  "label": {},
-  "title": {},
+  "button": {
+    "delete": "Delete",
+    "edit": "Edit",
+    "to_publish": "To publish",
+    "subscribe": "Subscribe"
+  },
+  "text_button": {
+    "reply": "Reply"
+  },
+  "label": {
+    "by_popular": "Popular",
+    "by_order": "By order"
+  },
+  "title": {
+    "comment": "Comment",
+    "comments": "Comments",
+    "comments_0d": "Comments",
+    "comments_1d": "Comments"
+  },
   "tab": {},
   "caption": {},
   "select": {},

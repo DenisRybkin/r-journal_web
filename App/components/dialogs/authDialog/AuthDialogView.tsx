@@ -4,8 +4,11 @@ import styles from "./authDialog.module.scss";
 import { AuthFrom } from "../../forms/AuthFrom/AuthForm";
 import CloseIcon from "@material-ui/icons/Close";
 import { IAuthDialogView } from "./authDialog.interface";
+import { useTranslation } from "react-i18next";
 
 export const AuthDialogView = (props: IAuthDialogView) => {
+  const { t } = useTranslation();
+
   return (
     <Dialog
       open={props.open}
@@ -30,10 +33,7 @@ export const AuthDialogView = (props: IAuthDialogView) => {
         <div className={styles.contentContainer}>
           <AuthFrom />
           <DialogContentText style={{ marginBottom: 0 }}>
-            <span>
-              Авторизуясь, вы соглашаетесь с правилами пользования сайтом и
-              даёте согласие на обработку персональных данных.
-            </span>
+            <span>{t("common:misc.hint.auth_terms")}</span>
           </DialogContentText>
         </div>
       </div>

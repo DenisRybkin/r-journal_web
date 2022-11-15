@@ -9,8 +9,11 @@ import {
 import styles from "./commentPost.module.scss";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { ICommentPostView } from "./commentPost.interface";
+import { useTranslation } from "react-i18next";
 
 export const CommentPostView = (props: ICommentPostView) => {
+  const { t } = useTranslation();
+
   return (
     <Paper elevation={0} className="p-20" classes={{ root: styles.paper }}>
       <Typography variant="h6" className={styles.title}>
@@ -29,8 +32,8 @@ export const CommentPostView = (props: ICommentPostView) => {
         open={Boolean(props.anchorEl)}
         onClose={props.onClose}
       >
-        <MenuItem onClick={props.onClose}>Удалить</MenuItem>
-        <MenuItem onClick={props.onClose}>Редактировать</MenuItem>
+        <MenuItem onClick={props.onClose}>{t("ui:button.delete")}</MenuItem>
+        <MenuItem onClick={props.onClose}>{t("ui:button.edit")}</MenuItem>
       </Menu>
     </Paper>
   );

@@ -3,8 +3,11 @@ import styles from "./comment.module.scss";
 import { IconButton, Menu, MenuItem, Typography } from "@material-ui/core";
 import MoreIcon from "@material-ui/icons/MoreHorizOutlined";
 import { ICommentView } from "./сomment.interface";
+import { useTranslation } from "react-i18next";
 
 export const CommentView = (props: ICommentView) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.comment}>
       <div className={styles.userInfo}>
@@ -13,7 +16,7 @@ export const CommentView = (props: ICommentView) => {
         <span>{props.comment.createdAt}</span>
       </div>
       <Typography className={styles.text}>{props.comment.text}</Typography>
-      <span className={styles.replyBtn}>Ответить</span>
+      <span className={styles.replyBtn}>{t("ui:text_button.reply")}</span>
       <IconButton onClick={props.onClickOpenMenuTrigger}>
         <MoreIcon />
       </IconButton>
@@ -24,8 +27,12 @@ export const CommentView = (props: ICommentView) => {
         onClose={props.onCloseMenu}
         keepMounted
       >
-        <MenuItem onClick={props.onDeleteComment}>Удалить</MenuItem>
-        <MenuItem onClick={props.onTurnOnIsEditMode}>Редактировать</MenuItem>
+        <MenuItem onClick={props.onDeleteComment}>
+          {t("ui:button.delete")}
+        </MenuItem>
+        <MenuItem onClick={props.onTurnOnIsEditMode}>
+          {t("ui:button.edit")}
+        </MenuItem>
       </Menu>
     </div>
   );

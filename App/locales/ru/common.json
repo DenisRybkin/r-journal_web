@@ -1,6 +1,10 @@
 {
   "text": {},
-  "misc": {},
+  "misc": {
+    "hint": {
+      "auth_terms": "By logging in, you agree to the terms of use of the site and consent to the processing of personal data."
+    }
+  },
   "date": {
     "day": {
       "monday": "Понедельник",

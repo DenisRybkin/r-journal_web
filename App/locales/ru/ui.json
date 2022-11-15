@@ -1,9 +1,27 @@
 {
-  "palceholder": {},
+  "palceholder": {
+    "heading": "Заголовок"
+  },
   "subheader": {},
-  "button": {},
-  "label": {},
-  "title": {},
+  "button": {
+    "delete": "Удалить",
+    "edit": "Релактировать",
+    "to_publish": "Опубликовать",
+    "subscribe": "Подписаться"
+  },
+  "text_button": {
+    "reply": "Ответить"
+  },
+  "label": {
+    "by_popular": "Популярные",
+    "by_order": "По порядку"
+  },
+  "title": {
+    "comment": "Коммертарий",
+    "comments": "Коммертарии",
+    "comments_0d": "Комментария",
+    "comments_1d": "Комментариев"
+  },
   "tab": {},
   "caption": {},
   "select": {},

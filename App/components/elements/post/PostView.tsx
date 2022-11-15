@@ -3,7 +3,7 @@ import { Paper, Typography } from "@material-ui/core";
 import styles from "./post.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { PostActionsView } from "../postActions/PostActionsView";
+import { PostActions } from "../postActions/PostActions";
 
 export const PostView = () => {
   return (
@@ -25,7 +25,7 @@ export const PostView = () => {
         height={500}
         width={600}
       />
-      <PostActionsView />
+      <PostActions />
     </Paper>
   );
 };

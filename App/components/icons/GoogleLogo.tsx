@@ -1,7 +1,7 @@
 import React from "react";
 import "./common/commonIcon.module.scss";
 
-export const GoogleLogoIcon = () => {
+export const GoogleLogo = () => {
   return (
     <>
       <path

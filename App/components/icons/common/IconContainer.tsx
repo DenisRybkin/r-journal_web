@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { IIconCommon } from "./iconCommon.interface";
 import { IconColors, IconsKeys } from "./iconsKeys";
 import {
-  GoogleLogoIcon,
+  GoogleLogo,
   VKLogoIcon,
   MessageIcon,
   FacebookLogo,
@@ -16,7 +16,7 @@ export const IconContainer = (props: IIconCommon): JSX.Element => {
   const handleGetIconContent = (): JSX.Element => {
     switch (props.iconKey) {
       case IconsKeys.googleLogo:
-        return <GoogleLogoIcon />;
+        return <GoogleLogo />;
       case IconsKeys.message:
         return <MessageIcon />;
       case IconsKeys.vkLogo:

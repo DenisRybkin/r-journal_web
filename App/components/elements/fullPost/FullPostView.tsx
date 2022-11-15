@@ -5,8 +5,11 @@ import MessageIcon from "@material-ui/icons/TextsmsOutlined";
 import UserAddIcon from "@material-ui/icons/PersonAddOutlined";
 
 import styles from "./fullPost.module.scss";
+import { useTranslation } from "react-i18next";
 
 export const FullPost = () => {
+  const { t } = useTranslation();
+
   return (
     <Paper elevation={0} className={styles.paper}>
       <div className="container">
@@ -54,7 +57,7 @@ export const FullPost = () => {
               </Button>
               <Button variant="contained">
                 <UserAddIcon />
-                <b className="ml-10">Подписаться</b>
+                <b className="ml-10">{t("ui:button.subscribe")}</b>
               </Button>
             </div>
           </div>
