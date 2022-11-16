@@ -6,6 +6,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 import { useRootStore } from "../../../../hooks/useRoorStore";
 import { observer } from "mobx-react-lite";
+import { AppLocaleKyes } from "../../../../types/locale";
 
 export const resources = {
   en: enResources,
@@ -24,7 +25,7 @@ export const LocaleProvider: React.FC = observer((props) => {
       interpolation: {
         escapeValue: false,
       },
-      supportedLngs: ["en", "ru"],
+      supportedLngs: [AppLocaleKyes.en, AppLocaleKyes.ru],
       lng: appStore.getAppLocale,
       debug: false,
       cleanCode: true,

@@ -4,8 +4,11 @@ import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import { IconButton } from "@material-ui/core";
 import clsx from "clsx";
 import { IBackLink } from "./backLink.interface";
+import { useTranslation } from "react-i18next";
 
 export const BackLink = (props: IBackLink) => {
+  const { t } = useTranslation();
+
   return (
     <div
       onClick={props.onOpenAuthContent}
@@ -14,7 +17,7 @@ export const BackLink = (props: IBackLink) => {
       <IconButton className="mr-10">
         <ArrowBackIosIcon />
       </IconButton>
-      <h2>К авторизации</h2>
+      <h2>{t("ui:title.to_authorization")}</h2>
     </div>
   );
 };

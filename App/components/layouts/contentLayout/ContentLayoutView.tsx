@@ -1,5 +1,5 @@
 import React from "react";
-import { IContentLayout, IContentLayoutView } from "./contentLayout.interface";
+import { IContentLayoutView } from "./contentLayout.interface";
 import clsx from "clsx";
 import { LeftMenu } from "../leftMenu/LeftMenu";
 import { SideComments } from "../sideComments/SideComments";

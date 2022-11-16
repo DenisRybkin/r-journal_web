@@ -2,8 +2,10 @@ import React from "react";
 import styles from "./addCommentForm.module.scss";
 import { Button, Input } from "@material-ui/core";
 import { IAddCommentFormView } from "./addCommentForm.interface";
+import { useTranslation } from "react-i18next";
 
 export const AddCommentFormView = (props: IAddCommentFormView) => {
+  const { t } = useTranslation();
   return (
     <form onSubmit={props.onSendComment} className={styles.form}>
       <Input
@@ -24,7 +26,7 @@ export const AddCommentFormView = (props: IAddCommentFormView) => {
           color="primary"
           type="submit"
         >
-          Опубликовать
+          {t("ui:button.to_publish")}
         </Button>
       )}
     </form>

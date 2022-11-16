@@ -1,8 +1,12 @@
 {
-  "text": {},
+  "text": {
+    "or": "or",
+    "login_to_account": "login to account",
+    "signup": "signup "
+  },
   "misc": {
     "hint": {
-      "auth_terms": "Авторизуясь, вы соглашаетесь с правилами пользования сайтом и даёте согласие на обработку персональных данных."
+      "auth_terms": "By logging in, you agree to the terms of use of the site and consent to the processing of personal data."
     }
   },
   "date": {

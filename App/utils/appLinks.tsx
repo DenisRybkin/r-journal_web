@@ -13,8 +13,8 @@ export interface IMenuLink {
 }
 
 export const menuLinks: IMenuLink[] = [
-  { text: "Лента", icon: <FireIcon />, path: "/" },
-  { text: "Сообщения", icon: <MessageIcon />, path: "/messages" },
-  { text: "Рейтинг RJ", icon: <TrendingIcon />, path: "/rating" },
-  { text: "Подписки", icon: <ListIcon />, path: "/follows" },
+  { text: "ui:side_menu.feed", icon: <FireIcon />, path: "/" },
+  { text: "ui:side_menu.messages", icon: <MessageIcon />, path: "/messages" },
+  { text: "ui:side_menu.rating", icon: <TrendingIcon />, path: "/rating" },
+  { text: "ui:side_menu.subscriptions", icon: <ListIcon />, path: "/follows" },
 ];

@@ -7,20 +7,31 @@
     "delete": "Удалить",
     "edit": "Релактировать",
     "to_publish": "Опубликовать",
-    "subscribe": "Подписаться"
+    "subscribe": "Подписаться",
+    "signup": "Зарегистрироваться",
+    "login": "Войти",
+    "by_email": "Через почту",
+    "vkontakte": "Вконтакте",
+    "new_entry": "Новая запись"
   },
   "text_button": {
     "reply": "Ответить"
   },
   "label": {
     "by_popular": "Популярные",
-    "by_order": "По порядку"
+    "by_order": "По порядку",
+    "password": "Пароль",
+    "name": "Имя"
   },
   "title": {
+    "auth_title": "Вход в RJ",
     "comment": "Коммертарий",
     "comments": "Коммертарии",
     "comments_0d": "Комментария",
-    "comments_1d": "Комментариев"
+    "comments_1d": "Комментариев",
+    "signup_by_email": "Регистрация через почту",
+    "login_by_email": "Войти через почту",
+    "to_authorization": "К авторизации"
   },
   "tab": {},
   "caption": {},
@@ -29,7 +40,12 @@
   "table": {},
   "tooltip": {},
   "checkbox": {},
-  "side_menu": {},
+  "side_menu": {
+    "feed": "Лента",
+    "messages": "Сообщения",
+    "rating": "Рейтинг RJ",
+    "subscriptions": "Подписки"
+  },
   "context_menu": {},
   "breadcrumbs": {}
 }

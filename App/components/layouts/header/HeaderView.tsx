@@ -40,7 +40,7 @@ export const HeaderView: React.FC<IHeaderView> = (props) => {
         <Link href="/write">
           <a>
             <Button variant="contained" className={styles.penButton}>
-              Новая запись
+              {t("ui:button.new_entry")}
             </Button>
           </a>
         </Link>
@@ -65,7 +65,7 @@ export const HeaderView: React.FC<IHeaderView> = (props) => {
           </Link>
         ) : (
           <div onClick={props.onOpenAuthDialog} className={styles.authButton}>
-            <AccountIcon /> Войти
+            <AccountIcon /> {t("ui:button.login")}
           </div>
         )}
       </div>

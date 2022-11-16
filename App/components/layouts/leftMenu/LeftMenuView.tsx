@@ -4,8 +4,10 @@ import styles from "./leftMenu.module.scss";
 import Link from "next/link";
 import { Button } from "@material-ui/core";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 export const LeftMenuView: React.FC<ILeftMenuView> = (props) => {
+  const { t } = useTranslation();
   return (
     <div className={styles.menu}>
       <ul>
@@ -22,7 +24,7 @@ export const LeftMenuView: React.FC<ILeftMenuView> = (props) => {
                   }
                 >
                   {obj.icon}
-                  {obj.text}
+                  {t(obj.text)}
                 </Button>
               </a>
             </Link>

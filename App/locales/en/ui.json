@@ -7,20 +7,31 @@
     "delete": "Delete",
     "edit": "Edit",
     "to_publish": "To publish",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "signup": "Signup",
+    "login": "Login",
+    "by_email": "By email",
+    "vkontakte": "Vkontakte",
+    "new_entry": "New entry"
   },
   "text_button": {
     "reply": "Reply"
   },
   "label": {
     "by_popular": "Popular",
-    "by_order": "By order"
+    "by_order": "By order",
+    "password": "Password",
+    "name": "Name"
   },
   "title": {
+    "auth_title": "Login to RJ",
     "comment": "Comment",
     "comments": "Comments",
     "comments_0d": "Comments",
-    "comments_1d": "Comments"
+    "comments_1d": "Comments",
+    "signup_by_email": "Signup by email",
+    "login_by_email": "Login by email",
+    "to_authorization": "To authorization"
   },
   "tab": {},
   "caption": {},
@@ -29,7 +40,12 @@
   "table": {},
   "tooltip": {},
   "checkbox": {},
-  "side_menu": {},
+  "side_menu": {
+    "feed": "Feed",
+    "messages": "Messages",
+    "rating": "Rating RJ",
+    "subscriptions": "Subscriptions"
+  },
   "context_menu": {},
   "breadcrumbs": {}
 }

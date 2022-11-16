@@ -4,12 +4,14 @@ import { Button } from "@material-ui/core";
 import { IconContainer } from "../../../../icons/common/IconContainer";
 import { IconColors, IconsKeys } from "../../../../icons/common/iconsKeys";
 import { IAuthContentView } from "./authContent.interface";
+import { useTranslation } from "react-i18next";
 
 export const AuthContentView = (props: IAuthContentView) => {
+  const { t } = useTranslation();
   return (
     <div className={styles.mainContent}>
       <h1 style={{ marginBottom: 20 }} className={styles.title}>
-        Вход в RJ
+        {t("ui:title.auth_title")}
       </h1>
       <Button variant="contained" fullWidth className="mb-10">
         <IconContainer
@@ -18,7 +20,7 @@ export const AuthContentView = (props: IAuthContentView) => {
           width={24}
           height={24}
         />
-        Вконтакте
+        {t("ui:button.vkontakte")}
       </Button>
       <Button variant="contained" fullWidth className="mb-10">
         <IconContainer
@@ -42,7 +44,7 @@ export const AuthContentView = (props: IAuthContentView) => {
           width={24}
           height={24}
         />
-        Через почту
+        {t("ui:button.by_email")}
       </Button>
       <div className="d-flex align-center justify-between">
         <Button variant="contained" style={{ width: "100px" }}>

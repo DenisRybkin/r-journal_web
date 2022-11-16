@@ -5,8 +5,11 @@ import { ISignupForm } from "../../auth.form.interface";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SignupSchemaValidation } from "../../../../../utils/schemas/signupSchema.validation";
+import { useTranslation } from "react-i18next";
 
 export const SignupFormView = (props: ISignupForm) => {
+  const { t } = useTranslation();
+
   const form = useForm({
     mode: "onChange",
     resolver: yupResolver(SignupSchemaValidation),
@@ -17,9 +20,9 @@ export const SignupFormView = (props: ISignupForm) => {
       onSubmit={form.handleSubmit(() => {})}
       className={styles.loginContent}
     >
-      <h1 className={styles.title}>Регистрация через почту</h1>
+      <h1 className={styles.title}>{t("ui:title.signup_by_email")}</h1>
       <h5 onClick={props.onOpenLoginForm} className={styles.subtitle}>
-        или <span>войти в аккаунт</span>
+        {t("common:text.or")} <span>{t("common:text.login_to_account")}</span>
       </h5>
       <TextField
         name="name"
@@ -28,7 +31,7 @@ export const SignupFormView = (props: ISignupForm) => {
         onChange={props.onChangeSignupCredentials("name")}
         className="mb-20"
         size="small"
-        label="Имя"
+        label={t("ui:label.name")}
         variant="outlined"
         fullWidth
         required
@@ -52,7 +55,7 @@ export const SignupFormView = (props: ISignupForm) => {
         value={props.signupCredentials.password}
         onChange={props.onChangeSignupCredentials("password")}
         size="small"
-        label="Пароль"
+        label={t("ui:label.password")}
         type="password"
         variant="outlined"
         fullWidth
@@ -64,7 +67,7 @@ export const SignupFormView = (props: ISignupForm) => {
         variant="contained"
         type="submit"
       >
-        Зарегестрироваться
+        {t("ui:button.signup")}
       </Button>
     </form>
   );

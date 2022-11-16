@@ -5,8 +5,11 @@ import { ILoginForm } from "../../auth.form.interface";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { LoginSchemaValidation } from "../../../../../utils/schemas/loginSchema.validation";
+import { useTranslation } from "react-i18next";
 
 export const LoginFormView = (props: ILoginForm) => {
+  const { t } = useTranslation();
+
   const form = useForm({
     mode: "onChange",
     resolver: yupResolver(LoginSchemaValidation),
@@ -14,9 +17,9 @@ export const LoginFormView = (props: ILoginForm) => {
 
   return (
     <>
-      <h1 className={styles.title}>Войти через почту</h1>
+      <h1 className={styles.title}>{t("ui:title.login_by_email")}</h1>
       <h5 onClick={props.onOpenSignForm} className={styles.subtitle}>
-        или <span>регистрация</span>
+        {t("common:text.or")} <span>{t("common:text.signup")}</span>
       </h5>
       <form
         onSubmit={form.handleSubmit(() => {})}
@@ -40,7 +43,7 @@ export const LoginFormView = (props: ILoginForm) => {
           value={props.loginCredentials.password}
           onChange={props.onChangeLoginCredentials("password")}
           size="small"
-          label="Пароль"
+          label={t("ui:label.password")}
           type="password"
           variant="outlined"
           fullWidth
@@ -52,7 +55,7 @@ export const LoginFormView = (props: ILoginForm) => {
           color="primary"
           variant="contained"
         >
-          Войти
+          {t("ui:button.login")}
         </Button>
       </form>
     </>
