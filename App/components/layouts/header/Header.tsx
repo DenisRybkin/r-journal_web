@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AuthDialog } from "../../dialogs/authDialog/AuthDialog";
+import { AuthDialog } from "../../modules/dialogs/authDialog/AuthDialog";
 import { HeaderView } from "./HeaderView";
 import { useRootStore } from "../../../hooks/useRoorStore";
 import { observer } from "mobx-react-lite";

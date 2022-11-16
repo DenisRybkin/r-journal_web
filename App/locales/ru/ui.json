@@ -46,6 +46,11 @@
     "rating": "Рейтинг RJ",
     "subscriptions": "Подписки"
   },
-  "context_menu": {},
+  "context_menu": {
+    "comment": "Комментировать",
+    "repost": "Сделать репост",
+    "add_to_favorite": "Добавить в избранное",
+    "share": "Поделться"
+  },
   "breadcrumbs": {}
 }

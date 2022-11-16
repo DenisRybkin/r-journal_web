@@ -1,5 +1,5 @@
 import { ContentLayout } from "../../App/components/layouts/contentLayout/ContentLayout";
-import { FullPost } from "../../App/components/elements/fullPost/FullPostView";
+import { FullPost } from "../../App/components/containers/fullPost/FullPostView";
 import React from "react";
 import { PostComments } from "../../App/components/elements/postComments/PostComments";
 

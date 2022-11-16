@@ -3,7 +3,7 @@ import { Paper, Typography } from "@material-ui/core";
 import styles from "./post.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { PostActions } from "../postActions/PostActions";
+import { PostActions } from "../../elements/postActions/PostActions";
 
 export const PostView = () => {
   return (

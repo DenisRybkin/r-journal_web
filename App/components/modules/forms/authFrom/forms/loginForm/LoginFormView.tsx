@@ -4,7 +4,7 @@ import { Button, TextField } from "@material-ui/core";
 import { ILoginForm } from "../../auth.form.interface";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { LoginSchemaValidation } from "../../../../../utils/schemas/loginSchema.validation";
+import { LoginSchemaValidation } from "../../../../../../utils/schemas/loginSchema.validation";
 import { useTranslation } from "react-i18next";
 
 export const LoginFormView = (props: ILoginForm) => {

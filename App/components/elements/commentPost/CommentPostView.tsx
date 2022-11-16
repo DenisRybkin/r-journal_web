@@ -17,7 +17,9 @@ export const CommentPostView = (props: ICommentPostView) => {
   return (
     <Paper elevation={0} className="p-20" classes={{ root: styles.paper }}>
       <Typography variant="h6" className={styles.title}>
-        <a href="#">{props.comment.post.title}</a>
+        <a href="App/components/modules/elements/commentPost/CommentPostView#">
+          {props.comment.post.title}
+        </a>
         <IconButton onClick={props.onClick}>
           <MoreVertIcon />
         </IconButton>

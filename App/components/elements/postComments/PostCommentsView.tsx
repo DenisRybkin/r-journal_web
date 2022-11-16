@@ -1,6 +1,6 @@
 import React from "react";
 import { Divider, Paper, Tab, Tabs, Typography } from "@material-ui/core";
-import { AddCommentForm } from "../../forms/addCommentForm/AddCommentForm";
+import { AddCommentForm } from "../../modules/forms/addCommentForm/AddCommentForm";
 import { Comment } from "../comment/Comment";
 import { IPostCommentsView } from "./postComments.interface";
 import { declension, useDeclension } from "../../../hooks/useDeclension";

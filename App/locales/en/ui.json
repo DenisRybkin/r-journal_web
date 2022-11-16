@@ -46,6 +46,11 @@
     "rating": "Rating RJ",
     "subscriptions": "Subscriptions"
   },
-  "context_menu": {},
+  "context_menu": {
+    "comment": "Comment",
+    "repost": "Repost",
+    "add_to_favorite": "Add to favorite",
+    "share": "Share"
+  },
   "breadcrumbs": {}
 }
