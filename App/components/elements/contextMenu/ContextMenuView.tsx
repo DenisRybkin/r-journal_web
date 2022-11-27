@@ -19,7 +19,9 @@ export const ContextMenuView: React.FC<IContextMenuView> = (props) => {
       >
         {props.menuItems.map((item) => (
           <MenuItem onClick={item.action} key={item.id}>
-            {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
+            {item.icon && (
+              <ListItemIcon style={{ minWidth: 40 }}>{item.icon}</ListItemIcon>
+            )}
             {item.text}
           </MenuItem>
         ))}
