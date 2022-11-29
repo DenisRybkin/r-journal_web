@@ -2,7 +2,9 @@
   "text": {
     "or": "or",
     "login_to_account": "login to account",
-    "signup": "signup "
+    "signup": "signup ",
+    "loading_data": "We're loading data",
+    "no_data": "No data"
   },
   "misc": {
     "hint": {
