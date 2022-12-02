@@ -15,6 +15,8 @@ export const SignupFormView = (props: ISignupForm) => {
     resolver: yupResolver(SignupSchemaValidation),
   });
 
+  console.log(form.register("name"));
+
   return (
     <form
       onSubmit={form.handleSubmit(() => {})}

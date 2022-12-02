@@ -1,5 +1,8 @@
 {
-  "error": {},
+  "error": {
+    "is_required": "This is a required field",
+    "password_length": "The password must be longer than 6 characters"
+  },
   "success": {},
   "info": {}
 }

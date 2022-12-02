@@ -34,7 +34,7 @@ export const HeaderView: React.FC<IHeaderView> = (props) => {
 
         <div className={styles.searchBlock}>
           <SearchIcon />
-          <input placeholder="Поиск" />
+          <input placeholder={t("ui:palceholder.search")} />
         </div>
 
         <Link href="/write">
