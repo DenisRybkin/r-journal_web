@@ -20,10 +20,15 @@
   font-weight: 500;
   svg {
     margin-right: 10px;
+    fill: var(--dark--text-color);
   }
   &:hover {
-    color: #efcfa2;
+    color: var(--primary-color_strongest);
+    svg {
+      fill: var(--primary-color_strongest);
+    }
   }
+  color: var(--dark--text-color);
 }
 
 .logo {

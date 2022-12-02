@@ -29,6 +29,28 @@ export const overridesTheme: Overrides = {
       color: "#e7cda2",
     },
   },
+  MuiInput: {
+    // Name of the styleSheet
+    underline: {
+      "&:hover:not($disabled):before": {
+        backgroundColor: "red",
+        height: 0,
+      },
+    },
+  },
+  MuiOutlinedInput: {
+    root: {
+      backgroundColor: "var(--color-faint_main)",
+      height: 40,
+      borderRadius: "var(--radius-sm)",
+      "&::placeholder": {
+        color: "red",
+      },
+    },
+    notchedOutline: {
+      display: "none",
+    },
+  },
   MuiButton: {
     root: {
       borderRadius: "8px",

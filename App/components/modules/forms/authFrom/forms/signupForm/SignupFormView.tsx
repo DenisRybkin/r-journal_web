@@ -15,8 +15,6 @@ export const SignupFormView = (props: ISignupForm) => {
     resolver: yupResolver(SignupSchemaValidation),
   });
 
-  console.log(form.register("name"));
-
   return (
     <form
       onSubmit={form.handleSubmit(() => {})}
@@ -33,7 +31,7 @@ export const SignupFormView = (props: ISignupForm) => {
         onChange={props.onChangeSignupCredentials("name")}
         className="mb-20"
         size="small"
-        label={t("ui:label.name")}
+        placeholder={t("ui:label.name")}
         variant="outlined"
         fullWidth
         required
@@ -68,6 +66,7 @@ export const SignupFormView = (props: ISignupForm) => {
         color="primary"
         variant="contained"
         type="submit"
+        onClick={() => form.getValues()}
       >
         {t("ui:button.signup")}
       </Button>

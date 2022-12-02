@@ -1,12 +1,24 @@
 :root {
+  // Primary
   --primary-color : #fff4e2;
   --primary-color_strong : #efe6cb;
   --primary-color_stronger: #e7cda2;
   --primary-color_strongest: #ffd796;
 
-  --contained-color: #fff;
+  //Faint
+  --color-faint_main: #f5f5f5;
 
+  //Misc
+  --contained-color: #fff;
   --dark--text-color: #757068;
 
+  //transitions
   --base-transition: .3s;
+
+  //Border-radius
+  --radius-xs: 2px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 15px;
+  --radius-xl: 30px
 }
