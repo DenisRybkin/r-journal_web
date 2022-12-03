@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import EditorJS from "@editorjs/editorjs";
+import { useTranslation } from "react-i18next";
 
 export const Editor: React.FC = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const editor = new EditorJS({
       holder: "editor",
-      placeholder: "Введите текст вашей статьи",
+      placeholder: t("ui:palceholder.e_post"),
     });
 
     return () => {

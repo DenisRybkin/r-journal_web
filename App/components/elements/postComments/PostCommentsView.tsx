@@ -9,17 +9,17 @@ import { useTranslation } from "react-i18next";
 export const PostCommentsView = (props: IPostCommentsView) => {
   const { t } = useTranslation();
 
-  const declensionComments = useDeclension(47, [
+  const declensionComments = useDeclension(props.comments.length, [
     "ui:title.comment",
     "ui:title.comments_0d",
     "ui:title.comments_1d",
   ]);
 
   return (
-    <Paper elevation={0} className="mt-40 p-30">
+    <Paper elevation={0} className="mt-20 pa-15">
       <div className="container">
-        <Typography variant="h6" className="mb-20">
-          {`47 ${t(declensionComments).toLowerCase()}`}
+        <Typography variant="h6" className="mb-10">
+          {`${props.comments.length} ${t(declensionComments).toLowerCase()}`}
         </Typography>
         <Tabs
           className="mt-20"
@@ -33,7 +33,7 @@ export const PostCommentsView = (props: IPostCommentsView) => {
         </Tabs>
         <Divider />
         <AddCommentForm />
-        <div className="mb-20" />
+        <div className="mb-10" />
         {props.comments?.map((item) => (
           <Comment comment={item} key={item.id} />
         ))}

@@ -19,7 +19,7 @@ export default function Profile() {
   return (
     <ContentLayout contentFullWidth hideComments>
       <Paper className="pl-20 pr-20 pt-20 mb-30" elevation={0}>
-        <div className="d-flex justify-between">
+        <div className="d-flex justify-space-between">
           <div>
             <Avatar
               style={{ width: 120, height: 120, borderRadius: 6 }}

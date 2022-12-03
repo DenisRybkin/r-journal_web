@@ -1,4 +1,5 @@
 import React, { CSSProperties } from "react";
+import styles from "./postActions.module.scss";
 import { IconButton } from "@material-ui/core";
 import {
   ModeCommentOutlined as CommentsIcon,
@@ -8,19 +9,9 @@ import {
 } from "@material-ui/icons";
 import { IPostActionsView } from "./postActions.interface";
 
-const styles: CSSProperties = {
-  display: "flex",
-  justifyContent: "space-between",
-  position: "relative",
-  top: "5",
-  listStyle: "none",
-  padding: "0",
-  margin: "0",
-};
-
 export const PostActionsView = (props: IPostActionsView) => {
   return (
-    <ul style={styles}>
+    <ul className={styles.postActionList}>
       <li>
         <IconButton>
           <CommentsIcon />

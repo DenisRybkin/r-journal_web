@@ -20,7 +20,7 @@ export const AuthDialogView = (props: IAuthDialogView) => {
       <IconButton className={styles.closeIcon} onClick={props.onClose}>
         <CloseIcon />
       </IconButton>
-      <div className="d-flex justify-between align-start h100p">
+      <div className="d-flex justify-space-between align-start h100p">
         <div className={styles.imgContainer}>
           <img
             height={35}

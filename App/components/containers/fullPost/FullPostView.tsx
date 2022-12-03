@@ -42,10 +42,10 @@ export const FullPost = () => {
           <div style={{ width: 250, marginLeft: -14 }}>
             <PostActions />
           </div>
-          <div className="d-flex justify-between align-center mt-30 mb-30">
+          <div className="d-flex justify-space-between align-center mt-15 mb-15">
             <div className={styles.userInfo}>
               <img
-                src="App/components/modules/elements/fullPost/FullPostView"
+                src="https://leonardo.osnova.io/7161cd97-ffdc-1930-2b13-419de941c777/-/scale_crop/64x64/-/format/webp/"
                 alt="Avatar"
               />
               <b>Donnie Darko</b>

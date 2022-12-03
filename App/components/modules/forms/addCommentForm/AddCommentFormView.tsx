@@ -14,7 +14,7 @@ export const AddCommentFormView = (props: IAddCommentFormView) => {
         onFocus={props.onFocus}
         onChange={(e) => props.onChangeComment(e.target.value)}
         classes={{ root: styles.fieldRoot }}
-        placeholder="Написать комментарий ..."
+        placeholder={t("ui:palceholder.w_comment")}
         fullWidth
         multiline
       />

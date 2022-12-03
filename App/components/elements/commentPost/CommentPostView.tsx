@@ -24,7 +24,7 @@ export const CommentPostView = (props: ICommentPostView) => {
           <MoreVertIcon />
         </IconButton>
       </Typography>
-      <Typography className="mt-10 mb-15">{props.comment.text}</Typography>
+      <Typography className="mt-5 mb-7">{props.comment.text}</Typography>
 
       <Menu
         id="simple-menu"

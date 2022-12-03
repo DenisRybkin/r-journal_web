@@ -15,7 +15,11 @@ export const PostView = (props: IPostView) => {
       onRepost={props.onRepost}
       onAddToFavorite={props.onAddToFavorite}
     >
-      <Paper elevation={0} className="p-20" classes={{ root: styles.paper }}>
+      <Paper
+        elevation={0}
+        className="pt-10 pr-10 pl-10 pb-5"
+        classes={{ root: styles.paper }}
+      >
         <Typography variant="h5" className={styles.title}>
           <Link href="/news/test-123">
             <a>
@@ -24,7 +28,7 @@ export const PostView = (props: IPostView) => {
             </a>
           </Link>
         </Typography>
-        <Typography className="mt-10 mb-15">
+        <Typography className="mt-5 mb-7">
           Пока одни не могли соотнести размеры животного и окружения, другие
           начали создавать апокалиптические сюжеты с котом в главной роли.
         </Typography>

@@ -16,6 +16,8 @@ export const SignupFormView = (props: ISignupForm) => {
     resolver: yupResolver(SignupSchemaValidation),
   });
 
+  console.log(form.getFieldState("name"), form.formState.errors);
+
   return (
     <div className="d-stack-column justify-space-between">
       <div>
@@ -25,7 +27,7 @@ export const SignupFormView = (props: ISignupForm) => {
         </h5>
       </div>
       <form
-        onSubmit={form.handleSubmit(() => {})}
+        onSubmit={form.handleSubmit(() => alert(5))}
         className={styles.loginContent}
       >
         <div className="mb-8">

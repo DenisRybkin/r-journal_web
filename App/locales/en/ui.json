@@ -4,7 +4,9 @@
     "search": "Search",
     "e_name": "Enter the name",
     "e_email": "Enter the email",
-    "e_password": "Enter the password"
+    "e_password": "Enter the password",
+    "e_post": "Enter the text of your post",
+    "w_comment": "Write a comment ..."
   },
   "subheader": {
     "name": "Name",

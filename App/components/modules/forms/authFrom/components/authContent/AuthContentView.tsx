@@ -44,7 +44,7 @@ export const AuthContentView = (props: IAuthContentView) => {
         />
         {t("ui:button.by_email")}
       </Button>
-      <div className="d-flex align-center justify-between">
+      <div className="d-flex align-center justify-space-between">
         <Button variant="contained" style={{ width: "100px" }}>
           <IconContainer
             iconKey={IconsKeys.facebookLogo}
