@@ -10,9 +10,7 @@ export const AuthContentView = (props: IAuthContentView) => {
   const { t } = useTranslation();
   return (
     <div className={styles.mainContent}>
-      <h1 style={{ marginBottom: 20 }} className={styles.title}>
-        {t("ui:title.auth_title")}
-      </h1>
+      <h1 className={styles.title + " mb-50"}>{t("ui:title.auth_title")}</h1>
       <Button variant="contained" fullWidth className="mb-10">
         <IconContainer
           iconKey={IconsKeys.vkLogo}

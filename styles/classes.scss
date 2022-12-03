@@ -1,4 +1,4 @@
-@import "./variables/variables_sass";
+@import "variables/variables_sass";
 
 .no-select {
   -webkit-touch-callout: none;
@@ -64,7 +64,7 @@
   margin-right: auto;
 }
 
-@for $i from 0 to 64 {
+@for $i from 0 to 120 {
   // Margin
   .ma-#{$i} {
     margin: $i * $indent-xs;

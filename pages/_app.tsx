@@ -1,5 +1,5 @@
 import "../styles/globals.scss";
-import "macro-css";
+//import "macro-css";
 import { RootLayout } from "../App/components/layouts/rootLyaout/RootLayout";
 import { RootProvider } from "../App/components/services/providers/rootProvider/RootProvider";
 

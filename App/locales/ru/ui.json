@@ -1,9 +1,16 @@
 {
   "palceholder": {
     "heading": "Заголовок",
-    "search": "Поиск"
+    "search": "Поиск",
+    "e_name": "Введите название",
+    "e_email": "Введите email",
+    "e_password": "Введите пароль"
   },
-  "subheader": {},
+  "subheader": {
+    "name": "Название",
+    "email": "Email",
+    "password": "Пароль"
+  },
   "button": {
     "delete": "Удалить",
     "edit": "Релактировать",

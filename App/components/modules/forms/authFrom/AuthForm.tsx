@@ -92,12 +92,12 @@ export const AuthFrom = () => {
   }, [currentContentKey]);
 
   return (
-    <>
+    <div>
       {(currentContentKey == ContentKeys.loginForm ||
         currentContentKey == ContentKeys.signupForm) && (
         <BackLink onOpenAuthContent={handleOpenAuthContent} />
       )}
       {handleRenderContent()}
-    </>
+    </div>
   );
 };

@@ -1,9 +1,16 @@
 {
   "palceholder": {
     "heading": "Heading",
-    "search": "Search"
+    "search": "Search",
+    "e_name": "Enter the name",
+    "e_email": "Enter the email",
+    "e_password": "Enter the password"
   },
-  "subheader": {},
+  "subheader": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password"
+  },
   "button": {
     "delete": "Delete",
     "edit": "Edit",
