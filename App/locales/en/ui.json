@@ -23,7 +23,8 @@
     "by_email": "By email",
     "vkontakte": "Vkontakte",
     "new_entry": "New entry",
-    "to_write": "To write"
+    "to_write": "To write",
+    "save_changes": "Save changes"
   },
   "text_button": {
     "reply": "Reply"
@@ -42,17 +43,25 @@
     "comments_1d": "Comments",
     "signup_by_email": "Signup by email",
     "login_by_email": "Login by email",
-    "to_authorization": "To authorization"
+    "to_authorization": "To authorization",
+    "rating_communities_and_blogs": "Rating of communities and blogs"
   },
   "tab": {
     "articles": "Articles",
     "comments": "Comments",
-    "marks": "Marks"
+    "marks": "Marks",
+    "for_all_time": "For all the time"
   },
   "caption": {},
   "select": {},
   "hint": {},
-  "table": {},
+  "table": {
+    "user_name": "User name",
+    "rating": "Rating",
+    "marks": "Marks",
+    "in_3_months": "In 3 months",
+    "for_all_time": "For all the time"
+  },
   "tooltip": {},
   "checkbox": {},
   "side_menu": {

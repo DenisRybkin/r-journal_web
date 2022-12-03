@@ -12,8 +12,11 @@ import {
 
 import { ContentLayout } from "../App/components/layouts/contentLayout/ContentLayout";
 import { FollowButton } from "../App/components/elements/followButton/FollowButton";
+import { useTranslation } from "react-i18next";
 
 export default function RatingPage() {
+  const { t } = useTranslation();
+
   return (
     <ContentLayout>
       <Paper className="pl-10 pt-10 pr-10 mb-10" elevation={0}>
@@ -21,13 +24,9 @@ export default function RatingPage() {
           variant="h5"
           style={{ fontWeight: "bold", fontSize: 30, marginBottom: 6 }}
         >
-          Рейтинг сообществ и блогов
+          {t("ui:title.rating_communities_and_blogs")}
         </Typography>
-        <Typography style={{ fontSize: 15 }}>
-          Десять лучших авторов и комментаторов, а также администраторы первых
-          десяти сообществ из рейтинга по итогам месяца бесплатно получают
-          Plus-аккаунт на месяц.
-        </Typography>
+        <Typography style={{ fontSize: 15 }}>{t("")}</Typography>
         <Tabs
           className="mt-5"
           value={0}
@@ -35,8 +34,8 @@ export default function RatingPage() {
           textColor="primary"
         >
           <Tab label="Август" />
-          <Tab label="За 3 месяцуа" />
-          <Tab label="За всё время" />
+          <Tab label={t("ui:table.in_3_months")} />
+          <Tab label={t("ui:table.for_all_time")} />
         </Tabs>
       </Paper>
 
@@ -44,8 +43,8 @@ export default function RatingPage() {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Имя пользователя</TableCell>
-              <TableCell align="right">Рейтинг</TableCell>
+              <TableCell>{t("ui:table.user_name")}</TableCell>
+              <TableCell align="right">{t("ui:table.rating")}</TableCell>
               <TableCell align="right"></TableCell>
             </TableRow>
           </TableHead>

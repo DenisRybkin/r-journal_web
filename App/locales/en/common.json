@@ -13,7 +13,8 @@
   },
   "misc": {
     "hint": {
-      "auth_terms": "By logging in, you agree to the terms of use of the site and consent to the processing of personal data."
+      "auth_terms": "By logging in, you agree to the terms of use of the site and consent to the processing of personal data.",
+      "rating_terms": "The top ten authors and commentators, as well as the administrators of the first ten communities from the rating at the end of the month receive free of charge Plus-account for a month."
     }
   },
   "date": {

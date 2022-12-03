@@ -23,7 +23,8 @@
     "by_email": "Через почту",
     "vkontakte": "Вконтакте",
     "new_entry": "Новая запись",
-    "to_write": "Написать"
+    "to_write": "Написать",
+    "save_changes": "Сохранить изменения"
   },
   "text_button": {
     "reply": "Ответить"
@@ -42,17 +43,24 @@
     "comments_1d": "Комментариев",
     "signup_by_email": "Регистрация через почту",
     "login_by_email": "Войти через почту",
-    "to_authorization": "К авторизации"
+    "to_authorization": "К авторизации",
+    "basic_settings": "Basic settings",
+    "rating_communities_and_blogs": "Рейтинг сообществ и блогов"
   },
   "tab": {
     "articles": "Статьи",
     "comments": "Комментарии",
-    "marks": "Закладки"
+    "marks": "Закладки",
+    "in_3_months": "За 3 месяца",
+    "for_all_time": "For all the time"
   },
   "caption": {},
   "select": {},
   "hint": {},
-  "table": {},
+  "table": {
+    "user_name": "Имя пользователя",
+    "rating": "Рейтинг"
+  },
   "tooltip": {},
   "checkbox": {},
   "side_menu": {

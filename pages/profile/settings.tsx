@@ -6,12 +6,15 @@ import {
   Typography,
 } from "@material-ui/core";
 import { ContentLayout } from "../../App/components/layouts/contentLayout/ContentLayout";
+import { useTranslation } from "react-i18next";
 
 export default function SettingsPage() {
+  const { t } = useTranslation();
+
   return (
     <ContentLayout hideComments>
       <Paper className="pa-10" elevation={0}>
-        <Typography variant="h6">Основные настройки</Typography>
+        <Typography variant="h6">{t("ui:title.basic_settings")}</Typography>
         <Divider className="mt-10 mb-20" />
         <form>
           <TextField
@@ -39,7 +42,7 @@ export default function SettingsPage() {
           />
           <Divider className="mt-15 mb-10" />
           <Button color="primary" variant="contained">
-            Сохранить изменения
+            {t("ui:button.save_changes")}
           </Button>
         </form>
       </Paper>
