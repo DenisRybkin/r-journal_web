@@ -22,7 +22,8 @@
     "login": "Login",
     "by_email": "By email",
     "vkontakte": "Vkontakte",
-    "new_entry": "New entry"
+    "new_entry": "New entry",
+    "to_write": "To write"
   },
   "text_button": {
     "reply": "Reply"

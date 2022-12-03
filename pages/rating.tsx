@@ -16,7 +16,7 @@ import { FollowButton } from "../App/components/elements/followButton/FollowButt
 export default function RatingPage() {
   return (
     <ContentLayout>
-      <Paper className="pl-20 pt-20 pr-20 mb-20" elevation={0}>
+      <Paper className="pl-10 pt-10 pr-10 mb-10" elevation={0}>
         <Typography
           variant="h5"
           style={{ fontWeight: "bold", fontSize: 30, marginBottom: 6 }}
@@ -29,7 +29,7 @@ export default function RatingPage() {
           Plus-аккаунт на месяц.
         </Typography>
         <Tabs
-          className="mt-10"
+          className="mt-5"
           value={0}
           indicatorColor="primary"
           textColor="primary"

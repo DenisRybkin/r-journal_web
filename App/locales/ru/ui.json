@@ -22,7 +22,8 @@
     "login": "Войти",
     "by_email": "Через почту",
     "vkontakte": "Вконтакте",
-    "new_entry": "Новая запись"
+    "new_entry": "Новая запись",
+    "to_write": "Написать"
   },
   "text_button": {
     "reply": "Ответить"

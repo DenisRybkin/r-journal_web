@@ -14,11 +14,13 @@ import {
 
 import { Post } from "../../App/components/containers/post/Post";
 import { ContentLayout } from "../../App/components/layouts/contentLayout/ContentLayout";
+import { useTranslation } from "react-i18next";
 
 export default function Profile() {
+  const { t } = useTranslation();
   return (
     <ContentLayout contentFullWidth hideComments>
-      <Paper className="pl-20 pr-20 pt-20 mb-30" elevation={0}>
+      <Paper className="pl-10 pr-10 pt-10 mb-15" elevation={0}>
         <div className="d-flex justify-space-between">
           <div>
             <Avatar
@@ -27,7 +29,7 @@ export default function Profile() {
             />
             <Typography
               style={{ fontWeight: "bold" }}
-              className="mt-10"
+              className="mt-5"
               variant="h4"
             >
               Amon Bower
@@ -44,14 +46,14 @@ export default function Profile() {
             </Link>
             <Button style={{ height: 42 }} variant="contained" color="primary">
               <MessageIcon className="mr-10" />
-              Написать
+              {t("ui:button.to_write")}
             </Button>
           </div>
         </div>
-        <div className="d-flex mb-10 mt-10">
+        <div className="d-flex mb-5 mt-5">
           <Typography
             style={{ fontWeight: "bold", color: "#35AB66" }}
-            className="mr-15"
+            className="mr-7"
           >
             +208
           </Typography>
@@ -60,7 +62,7 @@ export default function Profile() {
         <Typography>На проекте с 15 сен 2016</Typography>
 
         <Tabs
-          className="mt-20"
+          className="mt-10"
           value={0}
           indicatorColor="primary"
           textColor="primary"
@@ -71,18 +73,18 @@ export default function Profile() {
         </Tabs>
       </Paper>
       <div className="d-flex align-start">
-        <div className="mr-20 flex">
+        <div className="mr-10 d-flex">
           <Post />
         </div>
-        <Paper style={{ width: 300 }} className="p-20 mb-20" elevation={0}>
+        <Paper style={{ width: 300 }} className="pa-10 mb-10" elevation={0}>
           <b>Подписчики</b>
-          <div className="d-flex mt-15">
+          <div className="d-flex mt-7">
             <Avatar
-              className="mr-10"
+              className="mr-2"
               src="https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/"
             />
             <Avatar
-              className="mr-10"
+              className="mr-2"
               src="https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/"
             />
           </div>

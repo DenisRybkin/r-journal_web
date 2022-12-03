@@ -10,12 +10,12 @@ import { ContentLayout } from "../../App/components/layouts/contentLayout/Conten
 export default function SettingsPage() {
   return (
     <ContentLayout hideComments>
-      <Paper className="p-20" elevation={0}>
+      <Paper className="pa-10" elevation={0}>
         <Typography variant="h6">Основные настройки</Typography>
-        <Divider className="mt-20 mb-30" />
+        <Divider className="mt-10 mb-20" />
         <form>
           <TextField
-            className="mb-20"
+            className="mb-10"
             size="small"
             label="Никнейм"
             variant="outlined"
@@ -23,7 +23,7 @@ export default function SettingsPage() {
             required
           />
           <TextField
-            className="mb-20"
+            className="mb-10"
             size="small"
             label="Email"
             variant="outlined"
@@ -37,7 +37,7 @@ export default function SettingsPage() {
             fullWidth
             required
           />
-          <Divider className="mt-30 mb-20" />
+          <Divider className="mt-15 mb-10" />
           <Button color="primary" variant="contained">
             Сохранить изменения
           </Button>

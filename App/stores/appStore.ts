@@ -3,6 +3,7 @@ import { RootStore } from "./rootStore";
 import { LocalStorageKeys } from "../constants/localStorageKeys";
 import { LocalStorageHelper } from "../helpers/localStorageHelper";
 import { AppLocaleKyes, AppLocaleType } from "../types/locale";
+import i18next from "i18next";
 
 export class AppStore {
   root: RootStore;
@@ -16,7 +17,9 @@ export class AppStore {
     this.isOpenSidebar =
       LocalStorageHelper.get(LocalStorageKeys.isOpenSidebar) ?? true;
     this.appLocale =
-      LocalStorageHelper.get(LocalStorageKeys.appLocale) ?? AppLocaleKyes.ru;
+      LocalStorageHelper.get(LocalStorageKeys.appLocale) ??
+      (i18next.language as AppLocaleType) ??
+      AppLocaleKyes.ru;
   }
 
   get getIsOpenSidebar(): boolean {

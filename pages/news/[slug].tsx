@@ -5,7 +5,7 @@ import { PostComments } from "../../App/components/elements/postComments/PostCom
 
 export default function Home() {
   return (
-    <ContentLayout className="mb-50" contentFullWidth>
+    <ContentLayout className="mb-25" contentFullWidth>
       <>
         <FullPost />
         <PostComments />
