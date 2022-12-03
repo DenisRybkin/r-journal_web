@@ -45,7 +45,7 @@ export const overridesTheme: Overrides = {
       border: "1px solid var(--color-faint_main)",
       "&::placeholder": {
         color: "#000",
-        opacity: 0.8,
+        opacity: 0.7,
       },
       "&:hover": {
         backgroundColor: "var(--contained-color)",

@@ -42,7 +42,7 @@
   .d-stack-row {
     &.spacing-#{$i} {
       > :not(:last-child) {
-        margin-right: $i * $indent-xs;
+        margin-right: $i * $indent-xs !important;
       }
     }
   }
@@ -50,7 +50,7 @@
   .d-stack-column {
     &.spacing-#{$i} {
       > :not(:last-child) {
-        margin-bottom: $i * $indent-xs;
+        margin-bottom: $i * $indent-xs !important;
       }
     }
   }
@@ -67,99 +67,99 @@
 @for $i from 0 to 120 {
   // Margin
   .ma-#{$i} {
-    margin: $i * $indent-xs;
+    margin: $i * $indent-xs !important;
   }
   .mx-#{$i} {
-    margin-left: $i * $indent-xs;
-    margin-right: $i * $indent-xs;
+    margin-left: $i * $indent-xs !important;
+    margin-right: $i * $indent-xs !important;
   }
   .my-#{$i} {
-    margin-top: $i * $indent-xs;
-    margin-bottom: $i * $indent-xs;
+    margin-top: $i * $indent-xs !important;
+    margin-bottom: $i * $indent-xs !important;
   }
   .mt-#{$i} {
-    margin-top: $i * $indent-xs;
+    margin-top: $i * $indent-xs !important;
   }
   .mr-#{$i} {
-    margin-right: $i * $indent-xs;
+    margin-right: $i * $indent-xs !important;
   }
   .mb-#{$i} {
-    margin-bottom: $i * $indent-xs;
+    margin-bottom: $i * $indent-xs !important;
   }
   .ml-#{$i} {
-    margin-left: $i * $indent-xs;
+    margin-left: $i * $indent-xs !important;
   }
   // Margin negative
   .ma-n#{$i} {
-    margin: -1 * $i * $indent-xs;
+    margin: -1 * $i * $indent-xs !important;
   }
   .mx-n#{$i} {
-    margin-left: -1 * $i * $indent-xs;
-    margin-right: -1 * $i * $indent-xs;
+    margin-left: -1 * $i * $indent-xs !important;
+    margin-right: -1 * $i * $indent-xs !important;
   }
   .my-n#{$i} {
-    margin-top: $i * $indent-xs;
-    margin-bottom: $i * $indent-xs;
+    margin-top: $i * $indent-xs !important;
+    margin-bottom: $i * $indent-xs !important;
   }
   .mt-n#{$i} {
-    margin-top: -1 * $i * $indent-xs;
+    margin-top: -1 * $i * $indent-xs !important;
   }
   .mr-n#{$i} {
-    margin-right: -1 * $i * $indent-xs;
+    margin-right: -1 * $i * $indent-xs !important;
   }
   .mb-n#{$i} {
-    margin-bottom: -1 * $i * $indent-xs;
+    margin-bottom: -1 * $i * $indent-xs !important;
   }
   .ml-n#{$i} {
-    margin-left: -1 * $i * $indent-xs;
+    margin-left: -1 * $i * $indent-xs !important;
   }
   // Padding
   .pa-#{$i} {
-    padding: $i * $indent-xs;
+    padding: $i * $indent-xs !important;
   }
   .px-#{$i} {
-    padding-left: $i * $indent-xs;
-    padding-right: $i * $indent-xs;
+    padding-left: $i * $indent-xs !important;
+    padding-right: $i * $indent-xs !important;
   }
   .py-#{$i} {
-    padding-top: $i * $indent-xs;
-    padding-bottom: $i * $indent-xs;
+    padding-top: $i * $indent-xs !important;
+    padding-bottom: $i * $indent-xs !important;
   }
   .pt-#{$i} {
-    padding-top: $i * $indent-xs;
+    padding-top: $i * $indent-xs !important;
   }
   .pr-#{$i} {
-    padding-right: $i * $indent-xs;
+    padding-right: $i * $indent-xs !important;
   }
   .pb-#{$i} {
-    padding-bottom: $i * $indent-xs;
+    padding-bottom: $i * $indent-xs !important;
   }
   .pl-#{$i} {
-    padding-left: $i * $indent-xs;
+    padding-left: $i * $indent-xs !important;
   }
   // Padding negative
   .pa-n#{$i} {
-    padding: -1 * $i * $indent-xs;
+    padding: -1 * $i * $indent-xs !important;
   }
   .px-n#{$i} {
-    padding-left: -1 * $i * $indent-xs;
-    padding-right: -1 * $i * $indent-xs;
+    padding-left: -1 * $i * $indent-xs !important;
+    padding-right: -1 * $i * $indent-xs !important;
   }
   .py-n#{$i} {
-    padding-top: -1 * $i * $indent-xs;
-    padding-bottom: -1 * $i * $indent-xs;
+    padding-top: -1 * $i * $indent-xs !important;
+    padding-bottom: -1 * $i * $indent-xs !important;
   }
   .pt-n#{$i} {
-    padding-top: -1 * $i * $indent-xs;
+    padding-top: -1 * $i * $indent-xs !important;
   }
   .pr-n#{$i} {
-    padding-right: -1 * $i * $indent-xs;
+    padding-right: -1 * $i * $indent-xs !important;
   }
   .pb-n#{$i} {
-    padding-bottom: -1 * $i * $indent-xs;
+    padding-bottom: -1 * $i * $indent-xs !important;
   }
   .pl-n#{$i} {
-    padding-left: -1 * $i * $indent-xs;
+    padding-left: -1 * $i * $indent-xs !important;
   }
 }
 

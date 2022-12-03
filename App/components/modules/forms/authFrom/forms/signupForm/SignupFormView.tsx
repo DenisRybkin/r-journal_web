@@ -28,14 +28,13 @@ export const SignupFormView = (props: ISignupForm) => {
         onSubmit={form.handleSubmit(() => {})}
         className={styles.loginContent}
       >
-        <div>
+        <div className="mb-8">
           <Subheader text={t("ui:subheader.name")} />
           <TextField
             name="name"
             {...form.register("name")}
             value={props.signupCredentials.name}
             onChange={props.onChangeSignupCredentials("name")}
-            className="mb-20"
             size="small"
             placeholder={t("ui:palceholder.e_name")}
             variant="outlined"
@@ -43,14 +42,13 @@ export const SignupFormView = (props: ISignupForm) => {
             required
           />
         </div>
-        <div>
+        <div className="mb-8">
           <Subheader text={t("ui:subheader.email")} />
           <TextField
             name="email"
             {...form.register("email")}
             value={props.signupCredentials.email}
             onChange={props.onChangeSignupCredentials("email")}
-            className="mb-20"
             size="small"
             variant="outlined"
             type="email"
@@ -75,7 +73,7 @@ export const SignupFormView = (props: ISignupForm) => {
           />
         </div>
         <Button
-          className="mt-30"
+          className="mt-15"
           color="primary"
           variant="contained"
           type="submit"

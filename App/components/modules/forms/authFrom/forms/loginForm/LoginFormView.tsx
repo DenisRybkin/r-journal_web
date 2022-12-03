@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { LoginSchemaValidation } from "../../../../../../utils/schemas/loginSchema.validation";
 import { useTranslation } from "react-i18next";
+import { Subheader } from "../../../../../elements/subheader/Subheader";
 
 export const LoginFormView = (props: ILoginForm) => {
   const { t } = useTranslation();
@@ -25,33 +26,36 @@ export const LoginFormView = (props: ILoginForm) => {
         onSubmit={form.handleSubmit(() => {})}
         className={styles.loginContent}
       >
-        <TextField
-          name="email"
-          {...form.register("email")}
-          value={props.loginCredentials.email}
-          onChange={props.onChangeLoginCredentials("email")}
-          className="mb-20"
-          size="small"
-          label="Email"
-          variant="outlined"
-          fullWidth
-          required
-        />
-        <TextField
-          name="password"
-          {...form.register("password")}
-          value={props.loginCredentials.password}
-          onChange={props.onChangeLoginCredentials("password")}
-          size="small"
-          label={t("ui:label.password")}
-          type="password"
-          variant="outlined"
-          fullWidth
-          required
-        />
+        <div className="mb-8">
+          <Subheader text={t("ui:subheader.email")} />
+          <TextField
+            name="email"
+            {...form.register("email")}
+            value={props.loginCredentials.email}
+            onChange={props.onChangeLoginCredentials("email")}
+            size="small"
+            variant="outlined"
+            fullWidth
+            required
+          />
+        </div>
+        <div>
+          <Subheader text={t("ui:subheader.password")} />
+          <TextField
+            name="password"
+            {...form.register("password")}
+            value={props.loginCredentials.password}
+            onChange={props.onChangeLoginCredentials("password")}
+            size="small"
+            type="password"
+            variant="outlined"
+            fullWidth
+            required
+          />
+        </div>
         <Button
           type="submit"
-          className="mt-30"
+          className="mt-15"
           color="primary"
           variant="contained"
         >
