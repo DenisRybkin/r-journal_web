@@ -15,9 +15,20 @@ import {
 import { Post } from "../../App/components/containers/post/Post";
 import { ContentLayout } from "../../App/components/layouts/contentLayout/ContentLayout";
 import { useTranslation } from "react-i18next";
+import { useDeclension } from "../../App/hooks/useDeclension";
+import { SubscribersBlock } from "../../App/components/elements/subscribersBlock/SubscribersBlock";
 
 export default function Profile() {
   const { t } = useTranslation();
+
+  const declensionSubscribers = useDeclension(2, [
+    t("common:text.subscriber"),
+    t("common:text.subscriber_0d"),
+    t("common:text.subscriber_1d"),
+  ]);
+
+  const countCount = 208;
+
   return (
     <ContentLayout contentFullWidth hideComments>
       <Paper className="pl-10 pr-10 pt-10 mb-15" elevation={0}>
@@ -55,11 +66,13 @@ export default function Profile() {
             style={{ fontWeight: "bold", color: "#35AB66" }}
             className="mr-7"
           >
-            +208
+            +{countCount}
           </Typography>
-          <Typography>2 подписчика</Typography>
+          <Typography>2 {declensionSubscribers}</Typography>
         </div>
-        <Typography>На проекте с 15 сен 2016</Typography>
+        <Typography>
+          {`${t("common:text.on_the_project_from")}`} 15 сен 2016
+        </Typography>
 
         <Tabs
           className="mt-10"
@@ -67,28 +80,49 @@ export default function Profile() {
           indicatorColor="primary"
           textColor="primary"
         >
-          <Tab label="Статьи" />
-          <Tab label="Комментарии" />
-          <Tab label="Закладки" />
+          <Tab label={t("ui:tab.articles")} />
+          <Tab label={t("ui:tab.comments")} />
+          <Tab label={t("ui:tab.marks")} />
         </Tabs>
       </Paper>
       <div className="d-flex align-start">
         <div className="mr-10 d-flex">
           <Post />
         </div>
-        <Paper style={{ width: 300 }} className="pa-10 mb-10" elevation={0}>
-          <b>Подписчики</b>
-          <div className="d-flex mt-7">
-            <Avatar
-              className="mr-2"
-              src="https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/"
-            />
-            <Avatar
-              className="mr-2"
-              src="https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/"
-            />
-          </div>
-        </Paper>
+        <SubscribersBlock
+          users={[
+            {
+              id: 1,
+              avatarUrl:
+                "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
+              fullName: "fdssad",
+            },
+            {
+              id: 2,
+              avatarUrl:
+                "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
+              fullName: "fdssad",
+            },
+            {
+              id: 3,
+              avatarUrl:
+                "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
+              fullName: "fdssad",
+            },
+            {
+              id: 4,
+              avatarUrl:
+                "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
+              fullName: "fdssad",
+            },
+            {
+              id: 5,
+              avatarUrl:
+                "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
+              fullName: "fdssad",
+            },
+          ]}
+        />
       </div>
     </ContentLayout>
   );

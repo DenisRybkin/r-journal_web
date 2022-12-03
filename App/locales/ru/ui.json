@@ -44,7 +44,11 @@
     "login_by_email": "Войти через почту",
     "to_authorization": "К авторизации"
   },
-  "tab": {},
+  "tab": {
+    "articles": "Статьи",
+    "comments": "Комментарии",
+    "marks": "Закладки"
+  },
   "caption": {},
   "select": {},
   "hint": {},

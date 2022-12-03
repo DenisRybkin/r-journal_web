@@ -44,7 +44,11 @@
     "login_by_email": "Login by email",
     "to_authorization": "To authorization"
   },
-  "tab": {},
+  "tab": {
+    "articles": "Articles",
+    "comments": "Comments",
+    "marks": "Marks"
+  },
   "caption": {},
   "select": {},
   "hint": {},

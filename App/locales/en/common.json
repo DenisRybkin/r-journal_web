@@ -4,7 +4,12 @@
     "login_to_account": "login to account",
     "signup": "signup ",
     "loading_data": "We're loading data",
-    "no_data": "No data"
+    "no_data": "No data",
+    "subscriber": "subscriber",
+    "subscribers": "subscribers",
+    "subscriber_0d": "subscribers",
+    "subscriber_1d": "subscribers",
+    "on_the_project_from": "On the project from"
   },
   "misc": {
     "hint": {

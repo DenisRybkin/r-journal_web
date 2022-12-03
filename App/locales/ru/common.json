@@ -4,7 +4,12 @@
     "login_to_account": "войти в аккаунт",
     "signup": "регистрация",
     "loading_data": "Мы подгружаем данные",
-    "no_data": "Нет данных"
+    "no_data": "Нет данных",
+    "subscriber": "подписчик",
+    "subscribers": "подписчики",
+    "subscriber_0d": "подписчика",
+    "subscriber_1d": "подписчиков",
+    "on_the_project_from": "На проекте с"
   },
   "misc": {
     "hint": {
