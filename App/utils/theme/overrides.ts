@@ -38,14 +38,35 @@ export const overridesTheme: Overrides = {
       },
     },
   },
+
   MuiOutlinedInput: {
+    input: {
+      borderRadius: "var(--radius-sm)",
+      border: "1px solid var(--color-faint_main)",
+      "&::placeholder": {
+        color: "#000",
+        opacity: 0.8,
+      },
+      "&:hover": {
+        backgroundColor: "var(--contained-color)",
+        boxShadow: "0 0 0 3px var(--primary-color_strong)",
+        border: "1px solid #ebd6038f",
+      },
+      "&:focus": {
+        backgroundColor: "var(--contained-color)",
+        border: "1px solid #ebd603",
+        boxShadow: "0 0 0 3px var(--primary-color_strong)",
+      },
+    },
     root: {
       backgroundColor: "var(--color-faint_main)",
       height: 40,
       borderRadius: "var(--radius-sm)",
-      "&::placeholder": {
-        color: "red",
-      },
+      borderColor: "var(--color-faint_main)",
+      // "&:hover": {
+      //   backgroundColor: "var(--contained-color)",
+      //   boxShadow: "0 0 0 3px var(--primary-color_strong)",
+      // },
     },
     notchedOutline: {
       display: "none",
