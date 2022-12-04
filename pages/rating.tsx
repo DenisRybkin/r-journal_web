@@ -13,9 +13,11 @@ import {
 import { ContentLayout } from "../App/components/layouts/contentLayout/ContentLayout";
 import { FollowButton } from "../App/components/elements/followButton/FollowButton";
 import { useTranslation } from "react-i18next";
+import { useDateFormat } from "../App/hooks/useDateFormat";
 
 export default function RatingPage() {
   const { t } = useTranslation();
+  const { formatDate } = useDateFormat();
 
   return (
     <ContentLayout>
@@ -33,9 +35,14 @@ export default function RatingPage() {
           indicatorColor="primary"
           textColor="primary"
         >
-          <Tab label="Август" />
-          <Tab label={t("ui:table.in_3_months")} />
-          <Tab label={t("ui:table.for_all_time")} />
+          <Tab
+            label={formatDate(new Date(), {
+              month: "long",
+              doNotUsePredefinedOptions: true,
+            })}
+          />
+          <Tab label={t("ui:tab.in_3_months")} />
+          <Tab label={t("ui:tab.for_all_time")} />
         </Tabs>
       </Paper>
 

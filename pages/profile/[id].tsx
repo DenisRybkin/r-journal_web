@@ -17,9 +17,11 @@ import { ContentLayout } from "../../App/components/layouts/contentLayout/Conten
 import { useTranslation } from "react-i18next";
 import { useDeclension } from "../../App/hooks/useDeclension";
 import { SubscribersBlock } from "../../App/components/elements/subscribersBlock/SubscribersBlock";
+import { useDateFormat } from "../../App/hooks/useDateFormat";
 
 export default function Profile() {
   const { t } = useTranslation();
+  const { formatDate } = useDateFormat();
 
   const declensionSubscribers = useDeclension(2, [
     t("common:text.subscriber"),
@@ -71,7 +73,14 @@ export default function Profile() {
           <Typography>2 {declensionSubscribers}</Typography>
         </div>
         <Typography>
-          {`${t("common:text.on_the_project_from")}`} 15 сен 2016
+          {`${t("common:text.on_the_project_from")} ${formatDate(
+            new Date("04.05.2016"),
+            {
+              month: "long",
+              minute: undefined,
+              hour: undefined,
+            }
+          )}`}
         </Typography>
 
         <Tabs

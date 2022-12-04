@@ -44,7 +44,7 @@
     "signup_by_email": "Регистрация через почту",
     "login_by_email": "Войти через почту",
     "to_authorization": "К авторизации",
-    "basic_settings": "Basic settings",
+    "basic_settings": "Основыне настройки",
     "rating_communities_and_blogs": "Рейтинг сообществ и блогов"
   },
   "tab": {
@@ -52,7 +52,7 @@
     "comments": "Комментарии",
     "marks": "Закладки",
     "in_3_months": "За 3 месяца",
-    "for_all_time": "For all the time"
+    "for_all_time": "За всё время"
   },
   "caption": {},
   "select": {},
