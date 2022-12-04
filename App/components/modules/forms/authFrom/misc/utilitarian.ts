@@ -12,6 +12,7 @@ export const calculateNewCredentialsObj = (
   event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
 ): ILoginCredentials | ISignupCredentials => {
   const newObj = Object.assign({}, currentState); // чтобы не мутировать loginInitialData и signupInitialData, и чтобы сет стейту возвращал новую ссылку на обьект
+  // @ts-ignore
   newObj[fieldKey] = event.target.value;
   return newObj;
 };

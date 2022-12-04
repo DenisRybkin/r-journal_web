@@ -1,6 +1,18 @@
 import { useState } from "react";
 import { IApiControllerCrud } from "../api/interfaces/apiControllerCrud";
 
+export interface IUseUpdater<T> {
+  update: () => Promise<void>;
+  updatePartially: () => Promise<void>;
+  setInitialState: (initialState: T) => void;
+  applyChanges: (changes: Partial<T>) => void;
+  currentState: T | null;
+  beforeState: T | null;
+  reset: () => void;
+}
+
+export interface IUseUpdateWithController<T> extends IUseUpdater<T> {}
+
 const combineObjects = (a: any, b: any): any => ({ ...a, ...b });
 
 export const useUpdater = <T>(
@@ -63,6 +75,7 @@ export const useUpdateWithController = <T>(
   return useUpdater<T>(
     async (x) => await controller.edit(getId(x), x, params),
     async (x, y) => await controller.editPartially(getId(x), x, y, params),
-    onRequestEnd
+    onRequestEnd,
+    onError
   );
 };
