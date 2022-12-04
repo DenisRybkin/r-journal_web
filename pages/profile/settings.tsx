@@ -1,10 +1,4 @@
-import {
-  Button,
-  Divider,
-  Paper,
-  TextField,
-  Typography,
-} from "@material-ui/core";
+import { Button, Divider, Paper, Typography } from "@material-ui/core";
 import { ContentLayout } from "../../App/components/layouts/contentLayout/ContentLayout";
 import { useTranslation } from "react-i18next";
 import { ProfileSettingsForm } from "../../App/components/modules/forms/profileSettingsForm/ProfileSettingsForm";

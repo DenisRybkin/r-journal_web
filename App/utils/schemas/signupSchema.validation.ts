@@ -1,12 +1,17 @@
 import * as yup from "yup";
+import { TFunction } from "react-i18next";
 
-//TODO: добавить локолизацию
-
-export const SignupSchemaValidation = yup.object().shape({
-  name: yup.string().required(),
-  email: yup.string().email().required(),
-  password: yup
-    .string()
-    .min(6, "Длинна пароля должна быть более 6 символов")
-    .required("Это обязательное поле"),
-});
+export const SignupSchemaValidationCreator = (
+  t: TFunction<"translation", undefined>
+) =>
+  yup.object().shape({
+    name: yup.string().required(t("validation:error.is_required")),
+    email: yup
+      .string()
+      .email(t("validation:error.incorrect_email"))
+      .required(t("validation:error.is_required")),
+    password: yup
+      .string()
+      .min(6, t("validation:error.password_length"))
+      .required(t("validation:error.is_required")),
+  });

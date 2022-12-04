@@ -7,6 +7,7 @@ export interface IProfileSettingsForm {
 }
 
 export interface IProfileSettingsFormView {
+  isDisabledSaveBtn: boolean;
   updater: IUseUpdateWithController<UserDto>;
   onChangeSelector: (
     filedKey: ProfileFiledType

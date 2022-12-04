@@ -3,16 +3,16 @@ import { Subheader } from "../../../elements/subheader/Subheader";
 import { Button, Divider, TextField } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
-import { SignupSchemaValidation } from "../../../../utils/schemas/signupSchema.validation";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { IProfileSettingsFormView } from "./profileSettingsForm.interface";
+import { ProfileSchemaValidationCreator } from "../../../../utils/schemas/profileSchema.validation";
 
 export const ProfileSettingsFormView = (props: IProfileSettingsFormView) => {
   const { t } = useTranslation();
 
   const form = useForm({
     mode: "onChange",
-    //resolver: yupResolver(SignupSchemaValidation),
+    resolver: yupResolver(ProfileSchemaValidationCreator(t)),
   });
 
   return (
@@ -22,13 +22,14 @@ export const ProfileSettingsFormView = (props: IProfileSettingsFormView) => {
         <TextField
           name="name"
           {...form.register("name")}
+          error={!!form.formState.errors["name"]}
+          helperText={form.formState.errors["name"]?.message}
           value={props.updater.currentState?.fullName}
           onChange={props.onChangeSelector("fullName")}
           size="small"
           placeholder={t("ui:palceholder.e_name")}
           variant="outlined"
           fullWidth
-          required
         />
       </div>
       <div className="mb-10">
@@ -36,13 +37,14 @@ export const ProfileSettingsFormView = (props: IProfileSettingsFormView) => {
         <TextField
           name="email"
           {...form.register("email")}
+          error={!!form.formState.errors["email"]}
+          helperText={form.formState.errors["email"]?.message}
           value={props.updater.currentState?.email}
           onChange={props.onChangeSelector("email")}
           size="small"
           variant="outlined"
           type="email"
           fullWidth
-          required
           placeholder={t("ui:palceholder.e_email")}
         />
       </div>
@@ -50,6 +52,8 @@ export const ProfileSettingsFormView = (props: IProfileSettingsFormView) => {
         <Subheader text={t("ui:subheader.password")} />
         <TextField
           name="password"
+          error={!!form.formState.errors["password"]}
+          helperText={form.formState.errors["password"]?.message}
           {...form.register("password")}
           value={props.updater.currentState?.password}
           onChange={props.onChangeSelector("password")}
@@ -57,7 +61,6 @@ export const ProfileSettingsFormView = (props: IProfileSettingsFormView) => {
           type="password"
           variant="outlined"
           fullWidth
-          required
           placeholder={t("ui:palceholder.e_password")}
         />
       </div>

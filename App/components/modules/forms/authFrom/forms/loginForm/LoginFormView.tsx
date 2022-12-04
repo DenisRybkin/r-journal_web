@@ -4,7 +4,7 @@ import { Button, TextField } from "@material-ui/core";
 import { ILoginForm } from "../../auth.form.interface";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { LoginSchemaValidation } from "../../../../../../utils/schemas/loginSchema.validation";
+import { LoginSchemaValidationCreator } from "../../../../../../utils/schemas/loginSchema.validation";
 import { useTranslation } from "react-i18next";
 import { Subheader } from "../../../../../elements/subheader/Subheader";
 
@@ -13,7 +13,7 @@ export const LoginFormView = (props: ILoginForm) => {
 
   const form = useForm({
     mode: "onChange",
-    resolver: yupResolver(LoginSchemaValidation),
+    resolver: yupResolver(LoginSchemaValidationCreator(t)),
   });
 
   return (
@@ -31,18 +31,21 @@ export const LoginFormView = (props: ILoginForm) => {
           <TextField
             name="email"
             {...form.register("email")}
+            error={!!form.formState.errors["email"]}
+            helperText={form.formState.errors["email"]?.message}
             value={props.loginCredentials.email}
             onChange={props.onChangeLoginCredentials("email")}
             size="small"
             variant="outlined"
             fullWidth
-            required
           />
         </div>
         <div>
           <Subheader text={t("ui:subheader.password")} />
           <TextField
             name="password"
+            error={!!form.formState.errors["password"]}
+            helperText={form.formState.errors["password"]?.message}
             {...form.register("password")}
             value={props.loginCredentials.password}
             onChange={props.onChangeLoginCredentials("password")}
@@ -50,7 +53,6 @@ export const LoginFormView = (props: ILoginForm) => {
             type="password"
             variant="outlined"
             fullWidth
-            required
           />
         </div>
         <Button

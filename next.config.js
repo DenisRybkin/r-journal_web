@@ -3,5 +3,5 @@ module.exports = {
   images: {
     domains: ["leonardo.osnova.io"],
   },
-  webpack5: false,
+  webpack5: true,
 };

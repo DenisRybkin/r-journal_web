@@ -1,10 +1,11 @@
 import * as yup from "yup";
 import { TFunction } from "react-i18next";
 
-export const LoginSchemaValidationCreator = (
+export const ProfileSchemaValidationCreator = (
   t: TFunction<"translation", undefined>
 ) =>
   yup.object().shape({
+    name: yup.string().required(t("validation:error.is_required")),
     email: yup
       .string()
       .email(t("validation:error.incorrect_email"))

@@ -4,7 +4,7 @@ import { Button, TextField } from "@material-ui/core";
 import { ISignupForm } from "../../auth.form.interface";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { SignupSchemaValidation } from "../../../../../../utils/schemas/signupSchema.validation";
+import { SignupSchemaValidationCreator } from "../../../../../../utils/schemas/signupSchema.validation";
 import { useTranslation } from "react-i18next";
 import { Subheader } from "../../../../../elements/subheader/Subheader";
 
@@ -13,7 +13,7 @@ export const SignupFormView = (props: ISignupForm) => {
 
   const form = useForm({
     mode: "onChange",
-    resolver: yupResolver(SignupSchemaValidation),
+    resolver: yupResolver(SignupSchemaValidationCreator(t)),
   });
 
   console.log(form.getFieldState("name"), form.formState.errors);
@@ -34,6 +34,8 @@ export const SignupFormView = (props: ISignupForm) => {
           <Subheader text={t("ui:subheader.name")} />
           <TextField
             name="name"
+            error={!!form.formState.errors["name"]}
+            helperText={form.formState.errors["name"]?.message}
             {...form.register("name")}
             value={props.signupCredentials.name}
             onChange={props.onChangeSignupCredentials("name")}
@@ -41,13 +43,15 @@ export const SignupFormView = (props: ISignupForm) => {
             placeholder={t("ui:palceholder.e_name")}
             variant="outlined"
             fullWidth
-            required
+            //required
           />
         </div>
         <div className="mb-8">
           <Subheader text={t("ui:subheader.email")} />
           <TextField
             name="email"
+            error={!!form.formState.errors["email"]}
+            helperText={form.formState.errors["email"]?.message}
             {...form.register("email")}
             value={props.signupCredentials.email}
             onChange={props.onChangeSignupCredentials("email")}
@@ -55,7 +59,6 @@ export const SignupFormView = (props: ISignupForm) => {
             variant="outlined"
             type="email"
             fullWidth
-            required
             placeholder={t("ui:palceholder.e_email")}
           />
         </div>
@@ -63,6 +66,8 @@ export const SignupFormView = (props: ISignupForm) => {
           <Subheader text={t("ui:subheader.password")} />
           <TextField
             name="password"
+            error={!!form.formState.errors["password"]}
+            helperText={form.formState.errors["password"]?.message}
             {...form.register("password")}
             value={props.signupCredentials.password}
             onChange={props.onChangeSignupCredentials("password")}
@@ -70,12 +75,11 @@ export const SignupFormView = (props: ISignupForm) => {
             type="password"
             variant="outlined"
             fullWidth
-            required
             placeholder={t("ui:palceholder.e_password")}
           />
         </div>
         <Button
-          className="mt-15"
+          className="mt-10"
           color="primary"
           variant="contained"
           type="submit"

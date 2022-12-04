@@ -1,7 +1,8 @@
 {
   "error": {
     "is_required": "Это обязательное поле",
-    "password_length": "Длинна пароля должна быть более 6 символов"
+    "password_length": "Длинна пароля должна быть более 6 символов",
+    "incorrect_email": "Некорректный email"
   },
   "success": {},
   "info": {}
