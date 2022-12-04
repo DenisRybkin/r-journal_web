@@ -105,30 +105,40 @@ export default function Profile() {
               avatarUrl:
                 "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
               fullName: "fdssad",
+              email: "",
+              password: "",
             },
             {
               id: 2,
               avatarUrl:
                 "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
               fullName: "fdssad",
+              email: "",
+              password: "",
             },
             {
               id: 3,
               avatarUrl:
                 "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
               fullName: "fdssad",
+              email: "",
+              password: "",
             },
             {
               id: 4,
               avatarUrl:
                 "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
               fullName: "fdssad",
+              email: "",
+              password: "",
             },
             {
               id: 5,
               avatarUrl:
                 "https://leonardo.osnova.io/2d20257c-fec5-4b3e-7f60-055c86f24a4d/-/scale_crop/108x108/-/format/webp/",
               fullName: "fdssad",
+              email: "",
+              password: "",
             },
           ]}
         />

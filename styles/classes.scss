@@ -36,6 +36,16 @@
   flex-direction: column;
 }
 
+@for $i from 0 to 200 {
+  .w-#{$i} {
+    width: $i * $indent-xs !important;
+  }
+  .h-#{$i} {
+    height: $i * $indent-xs !important;
+  }
+}
+
+
 @for $i from 0 to 100 {
   // Stack row
   .d-stack,

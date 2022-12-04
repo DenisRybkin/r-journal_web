@@ -12,6 +12,14 @@ export const overridesTheme: Overrides = {
       minWidth: 0,
     },
   },
+  MuiAvatar: {
+    rounded: {
+      borderRadius: 8,
+    },
+    circular: {
+      borderRadius: "50%",
+    },
+  },
   MuiMenuItem: {
     // root: {
     //   backgroundColor: "red",

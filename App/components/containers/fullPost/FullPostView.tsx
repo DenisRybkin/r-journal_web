@@ -1,4 +1,4 @@
-import { Button, Paper, Typography } from "@material-ui/core";
+import { Avatar, Button, Paper, Typography } from "@material-ui/core";
 import React from "react";
 import { PostActions } from "../../elements/postActions/PostActions";
 import MessageIcon from "@material-ui/icons/TextsmsOutlined";
@@ -6,6 +6,7 @@ import UserAddIcon from "@material-ui/icons/PersonAddOutlined";
 
 import styles from "./fullPost.module.scss";
 import { useTranslation } from "react-i18next";
+import { UserInfo } from "../../elements/userInfo/UserInfo";
 
 export const FullPost = () => {
   const { t } = useTranslation();
@@ -43,14 +44,25 @@ export const FullPost = () => {
             <PostActions />
           </div>
           <div className="d-flex justify-space-between align-center mt-15 mb-15">
-            <div className={styles.userInfo}>
-              <img
-                src="https://leonardo.osnova.io/7161cd97-ffdc-1930-2b13-419de941c777/-/scale_crop/64x64/-/format/webp/"
-                alt="Avatar"
-              />
-              <b>Donnie Darko</b>
-              <span>+1685</span>
-            </div>
+            <UserInfo
+              user={{
+                fullName: "Donnie Darko",
+                avatarUrl:
+                  "https://leonardo.osnova.io/7161cd97-ffdc-1930-2b13-419de941c777/-/scale_crop/64x64/-/format/webp/",
+                id: 1,
+                email: "",
+                password: "",
+              }}
+              count={1685}
+            />
+            {/*<div className={styles.userInfo}>*/}
+            {/*  <img*/}
+            {/*    src="https://leonardo.osnova.io/7161cd97-ffdc-1930-2b13-419de941c777/-/scale_crop/64x64/-/format/webp/"*/}
+            {/*    alt="Avatar"*/}
+            {/*  />*/}
+            {/*  <b>Donnie Darko</b>*/}
+            {/*  <span>+1685</span>*/}
+            {/*</div>*/}
             <div>
               <Button variant="contained" className="mr-15">
                 <MessageIcon />
