@@ -54,9 +54,11 @@ export const useUpdater = <T>(
 export const useUpdateWithController = <T>(
   controller: IApiControllerCrud<T>,
   onRequestEnd?: (r: T | null) => void,
-  params?: any
+  params?: any,
+  onError?: () => void,
+  getIdPredicate?: (x: T) => number
 ) => {
-  const getId = (x: T) => (x as any).id;
+  const getId = (x: T) => (getIdPredicate ? getIdPredicate(x) : (x as any).id);
 
   return useUpdater<T>(
     async (x) => await controller.edit(getId(x), x, params),
