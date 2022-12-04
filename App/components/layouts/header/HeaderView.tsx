@@ -1,5 +1,12 @@
 import React from "react";
-import { Avatar, Button, IconButton, Paper } from "@material-ui/core";
+import {
+  Avatar,
+  Button,
+  IconButton,
+  InputAdornment,
+  Paper,
+  TextField,
+} from "@material-ui/core";
 import styles from "./header.module.scss";
 import {
   AccountCircleOutlined as AccountIcon,
@@ -12,6 +19,7 @@ import {
 import Link from "next/link";
 import { IHeaderView } from "./header.interface";
 import { useTranslation } from "react-i18next";
+import { SearchBlock } from "./components/searchBlock/SearchBlock";
 
 export const HeaderView: React.FC<IHeaderView> = (props) => {
   const { t } = useTranslation();
@@ -32,10 +40,7 @@ export const HeaderView: React.FC<IHeaderView> = (props) => {
           </a>
         </Link>
 
-        <div className={styles.searchBlock}>
-          <SearchIcon />
-          <input placeholder={t("ui:palceholder.search")} />
-        </div>
+        <SearchBlock value="" onChange={() => {}} />
 
         <Link href="/write">
           <a>
