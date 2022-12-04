@@ -16,7 +16,7 @@ export const useViewportObserver = <T>(
   useRef();
   const [isVisable, setVisable] = useState<boolean>(false);
 
-  const observer = new IntersectionObserver(
+  const observer: IntersectionObserver = new IntersectionObserver(
     ([entry]) => setVisable(entry.isIntersecting),
     defaultObserverOptionsInit ?? options
   );

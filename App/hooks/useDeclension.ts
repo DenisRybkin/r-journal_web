@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 
 export const declension = (count: number, titles: string[]): string => {
-  const cases = [2, 0, 1, 1, 1, 2];
-  const absoluteValueOfNumber = Math.abs(count);
+  const cases: number[] = [2, 0, 1, 1, 1, 2];
+  const absoluteValueOfNumber: number = Math.abs(count);
 
   return titles[
     absoluteValueOfNumber % 100 > 4 && absoluteValueOfNumber % 100 < 20

@@ -24,9 +24,7 @@ export const useDateFormat = () => {
   const postProcessFormatDateString = (dateString: string): string => {
     let str = dateString;
 
-    if (["ru"].includes(locale)) {
-      str = str.replaceAll(",", "");
-    }
+    if (["ru"].includes(locale)) str = str.replaceAll(",", "");
 
     return str;
   };

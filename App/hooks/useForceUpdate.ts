@@ -5,9 +5,9 @@ interface IUseForceUpdate {
 }
 
 export const useForceUpdate = (): IUseForceUpdate => {
-  const [state, setState] = useState<number>(0);
+  const [_, setState] = useState<number>(0);
 
-  const forceUpdate = () => setState((prev) => prev + 1);
+  const forceUpdate = (): void => setState((prev) => prev + 1);
 
   return { forceUpdate };
 };
