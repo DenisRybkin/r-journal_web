@@ -10,7 +10,7 @@ export const RootProvider: React.FC<IRootProvider> = (props) => {
     <StoreProvider pageProps={props.pageProps}>
       <LocaleProvider>
         <ThemeProvider>
-          <NotifierProvider> {props.children}</NotifierProvider>
+          <NotifierProvider>{props.children}</NotifierProvider>
         </ThemeProvider>
       </LocaleProvider>
     </StoreProvider>

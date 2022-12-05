@@ -20,7 +20,7 @@ export const SubscribersBlockView = (props: ISubscribersBlockView) => {
       </div>
       <div className="d-stack-row spacing-4 mt-7 flex-wrap">
         {props.users.map((item) => (
-          <div className="mb-3">
+          <div key={item.id} className="mb-3">
             <UserInfo key={item.id} user={item} isCirclar isAvatarOnly />
           </div>
         ))}

@@ -45,7 +45,7 @@ export const NotifierProviderObserver: React.FC = (props) => {
         anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
       >
         {handleGetNotifierContent(
-          NotifierThemeKeys.success,
+          notifierStore.getTheme,
           notifierStore.getMessage,
           handleClose
         )}

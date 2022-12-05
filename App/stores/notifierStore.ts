@@ -1,5 +1,6 @@
 import { RootStore } from "./rootStore";
 import { NotifierThemeKeys } from "../constants/notifierThemeKeys";
+import { makeAutoObservable } from "mobx";
 
 export type NotifierThemeType =
   | NotifierThemeKeys.info
@@ -21,6 +22,7 @@ export class NotifierStore {
   private timeout?: number;
 
   constructor(root: RootStore) {
+    makeAutoObservable(this);
     this.root = root;
     this.isOpen = false;
     this.message = null;

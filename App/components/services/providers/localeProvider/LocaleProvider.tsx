@@ -16,8 +16,6 @@ export const resources = {
 export const LocaleProvider: React.FC = observer((props) => {
   const { appStore } = useRootStore();
 
-  console.log(appStore.getAppLocale);
-
   i18next
     .use(LanguageDetector)
     .use(initReactI18next)

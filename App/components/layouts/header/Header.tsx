@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AuthDialog } from "../../modules/dialogs/authDialog/AuthDialog";
 import { HeaderView } from "./HeaderView";
 import { useRootStore } from "../../../hooks/useRoorStore";
