@@ -69,6 +69,7 @@ export const ProfileSettingsFormView = (props: IProfileSettingsFormView) => {
         color="primary"
         variant="contained"
         type="submit"
+        disabled={props.isDisabledSaveBtn}
         onClick={() => form.getValues()}
       >
         {t("ui:button.save_changes")}
