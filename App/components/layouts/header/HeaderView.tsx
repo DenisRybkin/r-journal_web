@@ -20,9 +20,13 @@ import Link from "next/link";
 import { IHeaderView } from "./header.interface";
 import { useTranslation } from "react-i18next";
 import { SearchBlock } from "./components/searchBlock/SearchBlock";
+import { useNotifier } from "../../../hooks/useNotifier";
 
 export const HeaderView: React.FC<IHeaderView> = (props) => {
   const { t } = useTranslation();
+
+  const { showDefaultError } = useNotifier();
+
   return (
     <Paper classes={{ root: styles.root }} elevation={0}>
       <div className="d-flex align-center">
@@ -51,7 +55,7 @@ export const HeaderView: React.FC<IHeaderView> = (props) => {
         </Link>
       </div>
       <div className="d-flex align-center">
-        <IconButton>
+        <IconButton onClick={showDefaultError}>
           <MessageIcon />
         </IconButton>
         <IconButton>

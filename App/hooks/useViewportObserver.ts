@@ -22,9 +22,9 @@ export const useViewportObserver = <T>(
   );
 
   useEffect(() => {
-    observer.observe(trigerRef?.current);
+    trigerRef?.current && observer.observe(trigerRef?.current);
     return () => observer.disconnect();
-  }, []);
+  }, [trigerRef?.current]);
 
   return {
     isVisable,

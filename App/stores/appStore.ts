@@ -11,9 +11,9 @@ export class AppStore {
   private isOpenSidebar: boolean;
   private appLocale: AppLocaleType;
 
-  constructor(root?: RootStore) {
+  constructor(root: RootStore) {
     makeAutoObservable(this);
-    //this.root = root;
+    this.root = root;
     this.isOpenSidebar =
       LocalStorageHelper.get(LocalStorageKeys.isOpenSidebar) ?? true;
     this.appLocale =
@@ -44,5 +44,3 @@ export class AppStore {
     this.setIsOpenSidebar(!this.isOpenSidebar);
   }
 }
-
-export const testStore = new AppStore();

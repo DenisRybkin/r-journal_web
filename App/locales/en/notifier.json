@@ -1,5 +1,7 @@
 {
-  "error": {},
+  "error": {
+    "something_wrong": "Что-то пошло не так..."
+  },
   "success": {},
   "info": {}
 }
